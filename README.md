@@ -55,6 +55,28 @@ AMOSTRADINHO(mensagem, numero);
 ACABOU
 ```
 
+## Memes e significado no código
+
+| Meme / palavra reservada | Função na MemeScript | Equivalente em Python |
+| --- | --- | --- |
+| `ACORDA_PEDRINHO` | Marca o início do programa. | Início do arquivo; não gera uma instrução própria. |
+| `ACABOU` | Marca o fim do programa. | Fim do arquivo; não gera uma instrução própria. |
+| `SABOR_INTEIRO` | Declara uma variável do tipo inteiro com valor inicial. | `numero = 67` (tipo `int`) |
+| `SABOR_REAL` | Declara uma variável do tipo real com valor inicial. | `preco = float(6.7)` (tipo `float`) |
+| `SABOR_TEXTO` | Declara uma variável do tipo texto com valor inicial. | `mensagem = "Receba!"` (tipo `str`) |
+| `RECEBA` | Atribui um novo valor a uma variável já declarada. | `numero = numero + 1` |
+| `QUERO_CAFE` | Lê uma entrada do teclado conforme o tipo da variável. | `numero = int(input())`, `preco = float(input())` ou `mensagem = input()` |
+| `AMOSTRADINHO` | Exibe um ou mais valores no terminal. | `print(mensagem, numero)` |
+| `E_VERDADE_ESSE_BILETE` | Executa um bloco se a condição for verdadeira. | `if energia >= 67:` |
+| `SO_QUE_NAO` | Executa o bloco alternativo se a condição for falsa. | `else:` |
+| `BORA_BILL` | Repete um bloco enquanto a condição for verdadeira. | `while numero < 10:` |
+| `DESCANSAR_NE` | Interrompe o laço mais próximo. | `break` |
+| `ATA` | Fecha um condicional inteiro ou um laço. | Fim do bloco, representado pela redução da indentação. |
+
+Os equivalentes acima ilustram o significado dos comandos. O Python gerado acrescenta o prefixo `ms_var_` aos nomes das variáveis. Os tipos são verificados pelo transpilador antes da geração; Python não exige essas palavras de declaração.
+
+Escreva as palavras reservadas exatamente como aparecem na tabela, em maiúsculas e com `_`. O meme **67** pode aparecer como um número literal, mas não é uma palavra reservada.
+
 ## Regras principais
 
 - Tipos declarados: `SABOR_INTEIRO`, `SABOR_REAL`, `SABOR_TEXTO`.
@@ -89,7 +111,7 @@ ACABOU
 | `testes/` | Suíte automatizada |
 | `docs/gramatica.ebnf` | Gramática completa |
 | `docs/relatorio_tecnico.md`, `.docx` e `.pdf` | Especificação formal |
-| `docs/apresentacao.pptx` | Apresentação editável com notas |
+| `docs/apresentacao_nova.pptx` | Apresentação editável com notas |
 | `docs/roteiro_defesa.md` | Falas sugeridas, demonstração e perguntas |
 | `docs/resultados_validacao.txt` | Registro reproduzível dos testes |
 
