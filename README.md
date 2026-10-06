@@ -2,8 +2,6 @@
 
 Linguagem temática baseada em memes, com transpilador para Python. Projeto do Trabalho Prático 1 de Linguagens Formais e Compiladores da UNIJUÍ, professor Marcos Ronaldo Melo Cavalheiro.
 
-Grupo de Pedro Rockenbach Frosi. Os demais integrantes devem acrescentar seus nomes à identificação antes da entrega.
-
 ## Pré-requisitos
 
 - Python 3.10 ou superior.
@@ -106,3 +104,12 @@ Entradas incompatíveis com o tipo, divisão por zero e estouro/faixa numérica 
 O enunciado permite Python desde que a equipe justifique a escolha e a informe ao professor no primeiro marco. A justificativa está no relatório. A escolha ainda precisa ser comunicada pela equipe; este material não afirma que o professor já a aprovou.
 
 Esta versão contou com assistência do ChatGPT na proposta da linguagem, implementação, testes, documentação e apresentação. Os integrantes devem revisar o material, verificar se esse uso é autorizado e dominar as etapas para a defesa individual. Nenhuma divisão de tarefas nem aprovação do professor foi presumida.
+
+## Contribuidores
+
+Aqui estão os membros do time que contribuíram para o desenvolvimento deste projeto:
+
+- Pedro Rockenbach Frosi           [@frosipedro](https://github.com/frosipedro)
+- Cristian dos Santos Siqueira     [@CristianSSiqueira](https://github.com/CristianSSiqueira)
+- Marco Antônio Hendges            [@Marco-Hendges](https://github.com/Marco-Hendges)
+- William Rafael Fagundes          [@Williamrafaelfagundes](https://github.com/Williamrafaelfagundes)
