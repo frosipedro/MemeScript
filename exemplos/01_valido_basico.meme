@@ -1,0 +1,9 @@
+ACORDA_PEDRINHO
+
+SABOR_INTEIRO numero = 67;
+SABOR_TEXTO mensagem = "Receba!";
+
+RECEBA numero = numero + 1;
+AMOSTRADINHO(mensagem, numero);
+
+ACABOU

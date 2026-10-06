@@ -1,0 +1,33 @@
+ACORDA_PEDRINHO
+
+SABOR_INTEIRO energia = 0;
+SABOR_INTEIRO cafes = 0;
+SABOR_INTEIRO limite = 0;
+SABOR_REAL preco = 4.50;
+SABOR_REAL gasto = 0;
+SABOR_TEXTO pedido = "QUERO CAFEEEEEEE!";
+
+AMOSTRADINHO("Qual o limite de cafés?");
+QUERO_CAFE(limite);
+
+BORA_BILL (cafes < limite)
+    RECEBA cafes = cafes + 1;
+    // Multiplicação antes da soma: cada café acrescenta 14 de energia.
+    RECEBA energia = energia + 2 + 3 * 4;
+    RECEBA gasto = cafes * preco;
+    AMOSTRADINHO("Cafés:", cafes, "Energia:", energia);
+
+    E_VERDADE_ESSE_BILETE (energia >= 67)
+        AMOSTRADINHO("Já estou elétrico!");
+        DESCANSAR_NE;
+    SO_QUE_NAO
+        AMOSTRADINHO(pedido);
+    ATA
+ATA
+
+AMOSTRADINHO("Energia final:", energia);
+AMOSTRADINHO("Gasto:", gasto);
+AMOSTRADINHO("Precedência:", 2 + 3 * 4);
+AMOSTRADINHO("Parênteses:", (2 + 3) * 4);
+
+ACABOU

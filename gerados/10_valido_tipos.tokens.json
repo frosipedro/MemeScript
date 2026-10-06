@@ -1,0 +1,373 @@
+[
+  {
+    "kind": "ACORDA_PEDRINHO",
+    "lexeme": "ACORDA_PEDRINHO",
+    "value": "ACORDA_PEDRINHO",
+    "line": 1,
+    "column": 1
+  },
+  {
+    "kind": "SABOR_INTEIRO",
+    "lexeme": "SABOR_INTEIRO",
+    "value": "SABOR_INTEIRO",
+    "line": 2,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "print",
+    "value": "print",
+    "line": 2,
+    "column": 15
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 2,
+    "column": 21
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "67",
+    "value": 67,
+    "line": 2,
+    "column": 23
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 2,
+    "column": 25
+  },
+  {
+    "kind": "SABOR_REAL",
+    "lexeme": "SABOR_REAL",
+    "value": "SABOR_REAL",
+    "line": 3,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "class",
+    "value": "class",
+    "line": 3,
+    "column": 12
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 3,
+    "column": 18
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "0",
+    "value": 0,
+    "line": 3,
+    "column": 20
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 3,
+    "column": 21
+  },
+  {
+    "kind": "SABOR_TEXTO",
+    "lexeme": "SABOR_TEXTO",
+    "value": "SABOR_TEXTO",
+    "line": 4,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "nome",
+    "value": "nome",
+    "line": 4,
+    "column": 13
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 4,
+    "column": 18
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"\"",
+    "value": "",
+    "line": 4,
+    "column": 20
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 4,
+    "column": 22
+  },
+  {
+    "kind": "QUERO_CAFE",
+    "lexeme": "QUERO_CAFE",
+    "value": "QUERO_CAFE",
+    "line": 5,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 5,
+    "column": 11
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "nome",
+    "value": "nome",
+    "line": 5,
+    "column": 12
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 5,
+    "column": 16
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 5,
+    "column": 17
+  },
+  {
+    "kind": "QUERO_CAFE",
+    "lexeme": "QUERO_CAFE",
+    "value": "QUERO_CAFE",
+    "line": 6,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 6,
+    "column": 11
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "class",
+    "value": "class",
+    "line": 6,
+    "column": 12
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 6,
+    "column": 17
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 6,
+    "column": 18
+  },
+  {
+    "kind": "RECEBA",
+    "lexeme": "RECEBA",
+    "value": "RECEBA",
+    "line": 7,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "class",
+    "value": "class",
+    "line": 7,
+    "column": 8
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 7,
+    "column": 14
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "class",
+    "value": "class",
+    "line": 7,
+    "column": 16
+  },
+  {
+    "kind": "/",
+    "lexeme": "/",
+    "value": "/",
+    "line": 7,
+    "column": 22
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "2",
+    "value": 2,
+    "line": 7,
+    "column": 24
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 7,
+    "column": 25
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 8,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 8,
+    "column": 13
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "nome",
+    "value": "nome",
+    "line": 8,
+    "column": 14
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 8,
+    "column": 18
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "print",
+    "value": "print",
+    "line": 8,
+    "column": 20
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 8,
+    "column": 25
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "class",
+    "value": "class",
+    "line": 8,
+    "column": 27
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 8,
+    "column": 32
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 8,
+    "column": 33
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 9,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 9,
+    "column": 13
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Texto:\"",
+    "value": "Texto:",
+    "line": 9,
+    "column": 14
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 9,
+    "column": 22
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"ATA\"",
+    "value": "ATA",
+    "line": 9,
+    "column": 24
+  },
+  {
+    "kind": "==",
+    "lexeme": "==",
+    "value": "==",
+    "line": 9,
+    "column": 30
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"ATA\"",
+    "value": "ATA",
+    "line": 9,
+    "column": 33
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 9,
+    "column": 38
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 9,
+    "column": 39
+  },
+  {
+    "kind": "ACABOU",
+    "lexeme": "ACABOU",
+    "value": "ACABOU",
+    "line": 10,
+    "column": 1
+  },
+  {
+    "kind": "EOF",
+    "lexeme": "",
+    "value": null,
+    "line": 11,
+    "column": 1
+  }
+]

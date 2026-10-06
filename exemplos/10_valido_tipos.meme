@@ -1,0 +1,10 @@
+ACORDA_PEDRINHO
+SABOR_INTEIRO print = 67;
+SABOR_REAL class = 0;
+SABOR_TEXTO nome = "";
+QUERO_CAFE(nome);
+QUERO_CAFE(class);
+RECEBA class = class / 2;
+AMOSTRADINHO(nome, print, class);
+AMOSTRADINHO("Texto:", "ATA" == "ATA");
+ACABOU

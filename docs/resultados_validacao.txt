@@ -1,0 +1,100 @@
+Validação da MemeScript 1.0
+Python 3.12.14 em Linux
+
+
+Comando: python -m unittest discover -s testes -v
+Código de saída: 0
+test_cli_check_does_not_write (test_transpilador.IntegrationTests.test_cli_check_does_not_write) ... ok
+test_cli_error_does_not_write_or_overwrite (test_transpilador.IntegrationTests.test_cli_error_does_not_write_or_overwrite) ... ok
+test_cli_success_and_debug (test_transpilador.IntegrationTests.test_cli_success_and_debug) ... ok
+test_complete_expected_output (test_transpilador.IntegrationTests.test_complete_expected_output) ... ok
+test_complete_zero_limit (test_transpilador.IntegrationTests.test_complete_zero_limit) ... ok
+test_invalid_example_categories (test_transpilador.IntegrationTests.test_invalid_example_categories) ... ok
+test_python_identifiers_do_not_collide (test_transpilador.IntegrationTests.test_python_identifiers_do_not_collide) ... ok
+test_string_contents_are_not_code (test_transpilador.IntegrationTests.test_string_contents_are_not_code) ... ok
+test_valid_examples (test_transpilador.IntegrationTests.test_valid_examples) ... ok
+test_bad_string (test_transpilador.LexerTests.test_bad_string) ... ok
+test_crlf_and_comments (test_transpilador.LexerTests.test_crlf_and_comments) ... ok
+test_invalid_character_location (test_transpilador.LexerTests.test_invalid_character_location) ... ok
+test_keyword_boundary (test_transpilador.LexerTests.test_keyword_boundary) ... ok
+test_longest_match (test_transpilador.LexerTests.test_longest_match) ... ok
+test_string_escapes (test_transpilador.LexerTests.test_string_escapes) ... ok
+test_arithmetic_behavior (test_transpilador.ParserTests.test_arithmetic_behavior) ... ok
+test_ast_precedence (test_transpilador.ParserTests.test_ast_precedence) ... ok
+test_ast_serialization (test_transpilador.ParserTests.test_ast_serialization) ... ok
+test_comparisons (test_transpilador.ParserTests.test_comparisons) ... ok
+test_empty_blocks_and_program (test_transpilador.ParserTests.test_empty_blocks_and_program) ... ok
+test_extra_source_after_end (test_transpilador.ParserTests.test_extra_source_after_end) ... ok
+test_syntax_failures (test_transpilador.ParserTests.test_syntax_failures) ... ok
+test_break_outside_loop (test_transpilador.SemanticTests.test_break_outside_loop) ... ok
+test_comparison_type_rules (test_transpilador.SemanticTests.test_comparison_type_rules) ... ok
+test_duplicate (test_transpilador.SemanticTests.test_duplicate) ... ok
+test_invalid_conditions (test_transpilador.SemanticTests.test_invalid_conditions) ... ok
+test_numeric_promotion (test_transpilador.SemanticTests.test_numeric_promotion) ... ok
+test_operations_reject_non_numeric (test_transpilador.SemanticTests.test_operations_reject_non_numeric) ... ok
+test_self_reference_and_forward_reference (test_transpilador.SemanticTests.test_self_reference_and_forward_reference) ... ok
+test_symbols (test_transpilador.SemanticTests.test_symbols) ... ok
+test_type_errors (test_transpilador.SemanticTests.test_type_errors) ... ok
+test_undeclared_read_write_and_expression (test_transpilador.SemanticTests.test_undeclared_read_write_and_expression) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.236s
+
+OK
+
+
+Comando: python demo.py
+Código de saída: 0
+
+=== 01_valido_basico ===
+ACERTOU, MISERAVI! Python gerado em: ./gerados/01_valido_basico.py
+Receba! 68
+
+=== 02_valido_completo ===
+ACERTOU, MISERAVI! Python gerado em: ./gerados/02_valido_completo.py
+Qual o limite de cafés?
+Cafés: 1 Energia: 14
+QUERO CAFEEEEEEE!
+Cafés: 2 Energia: 28
+QUERO CAFEEEEEEE!
+Cafés: 3 Energia: 42
+QUERO CAFEEEEEEE!
+Cafés: 4 Energia: 56
+QUERO CAFEEEEEEE!
+Cafés: 5 Energia: 70
+Já estou elétrico!
+Energia final: 70
+Gasto: 22.5
+Precedência: 14
+Parênteses: 20
+
+=== 09_valido_aninhado ===
+ACERTOU, MISERAVI! Python gerado em: ./gerados/09_valido_aninhado.py
+0 1
+1 1
+Fim: 2 2
+
+=== 10_valido_tipos ===
+ACERTOU, MISERAVI! Python gerado em: ./gerados/10_valido_tipos.py
+Pedro 67 6.7
+Texto: True
+
+=== 03_erro_lexico ===
+
+=== 04_erro_sintatico ===
+
+=== 05_erro_semantico ===
+
+=== 06_erro_redeclaracao ===
+
+=== 07_erro_tipos ===
+
+=== 08_erro_break ===
+
+Demonstração concluída: programas válidos executados e inválidos rejeitados.
+Erro léxico na linha 3, coluna 24: símbolo inválido '@'
+Erro sintático na linha 2, coluna 24: encontrado ';'; esperado literal, identificador ou expressão entre parênteses
+Erro semântico na linha 2, coluna 8: variável 'numero' usada antes da declaração
+Erro semântico na linha 3, coluna 12: declaração duplicada de 'numero' no escopo global
+Erro semântico na linha 3, coluna 8: atribuição incompatível: esperado inteiro, recebido texto
+Erro semântico na linha 2, coluna 1: DESCANSAR_NE só pode aparecer dentro de BORA_BILL

@@ -1,0 +1,4 @@
+ACORDA_PEDRINHO
+SABOR_INTEIRO numero = 67;
+RECEBA numero = numero @ 2;
+ACABOU

@@ -1,0 +1,8 @@
+{
+  "energia": "inteiro",
+  "cafes": "inteiro",
+  "limite": "inteiro",
+  "preco": "real",
+  "gasto": "real",
+  "pedido": "texto"
+}

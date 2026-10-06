@@ -1,0 +1,1010 @@
+[
+  {
+    "kind": "ACORDA_PEDRINHO",
+    "lexeme": "ACORDA_PEDRINHO",
+    "value": "ACORDA_PEDRINHO",
+    "line": 1,
+    "column": 1
+  },
+  {
+    "kind": "SABOR_INTEIRO",
+    "lexeme": "SABOR_INTEIRO",
+    "value": "SABOR_INTEIRO",
+    "line": 3,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "energia",
+    "value": "energia",
+    "line": 3,
+    "column": 15
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 3,
+    "column": 23
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "0",
+    "value": 0,
+    "line": 3,
+    "column": 25
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 3,
+    "column": 26
+  },
+  {
+    "kind": "SABOR_INTEIRO",
+    "lexeme": "SABOR_INTEIRO",
+    "value": "SABOR_INTEIRO",
+    "line": 4,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "cafes",
+    "value": "cafes",
+    "line": 4,
+    "column": 15
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 4,
+    "column": 21
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "0",
+    "value": 0,
+    "line": 4,
+    "column": 23
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 4,
+    "column": 24
+  },
+  {
+    "kind": "SABOR_INTEIRO",
+    "lexeme": "SABOR_INTEIRO",
+    "value": "SABOR_INTEIRO",
+    "line": 5,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "limite",
+    "value": "limite",
+    "line": 5,
+    "column": 15
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 5,
+    "column": 22
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "0",
+    "value": 0,
+    "line": 5,
+    "column": 24
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 5,
+    "column": 25
+  },
+  {
+    "kind": "SABOR_REAL",
+    "lexeme": "SABOR_REAL",
+    "value": "SABOR_REAL",
+    "line": 6,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "preco",
+    "value": "preco",
+    "line": 6,
+    "column": 12
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 6,
+    "column": 18
+  },
+  {
+    "kind": "REAL",
+    "lexeme": "4.50",
+    "value": 4.5,
+    "line": 6,
+    "column": 20
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 6,
+    "column": 24
+  },
+  {
+    "kind": "SABOR_REAL",
+    "lexeme": "SABOR_REAL",
+    "value": "SABOR_REAL",
+    "line": 7,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "gasto",
+    "value": "gasto",
+    "line": 7,
+    "column": 12
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 7,
+    "column": 18
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "0",
+    "value": 0,
+    "line": 7,
+    "column": 20
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 7,
+    "column": 21
+  },
+  {
+    "kind": "SABOR_TEXTO",
+    "lexeme": "SABOR_TEXTO",
+    "value": "SABOR_TEXTO",
+    "line": 8,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "pedido",
+    "value": "pedido",
+    "line": 8,
+    "column": 13
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 8,
+    "column": 20
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"QUERO CAFEEEEEEE!\"",
+    "value": "QUERO CAFEEEEEEE!",
+    "line": 8,
+    "column": 22
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 8,
+    "column": 41
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 10,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 10,
+    "column": 13
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Qual o limite de cafés?\"",
+    "value": "Qual o limite de cafés?",
+    "line": 10,
+    "column": 14
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 10,
+    "column": 39
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 10,
+    "column": 40
+  },
+  {
+    "kind": "QUERO_CAFE",
+    "lexeme": "QUERO_CAFE",
+    "value": "QUERO_CAFE",
+    "line": 11,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 11,
+    "column": 11
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "limite",
+    "value": "limite",
+    "line": 11,
+    "column": 12
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 11,
+    "column": 18
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 11,
+    "column": 19
+  },
+  {
+    "kind": "BORA_BILL",
+    "lexeme": "BORA_BILL",
+    "value": "BORA_BILL",
+    "line": 13,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 13,
+    "column": 11
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "cafes",
+    "value": "cafes",
+    "line": 13,
+    "column": 12
+  },
+  {
+    "kind": "<",
+    "lexeme": "<",
+    "value": "<",
+    "line": 13,
+    "column": 18
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "limite",
+    "value": "limite",
+    "line": 13,
+    "column": 20
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 13,
+    "column": 26
+  },
+  {
+    "kind": "RECEBA",
+    "lexeme": "RECEBA",
+    "value": "RECEBA",
+    "line": 14,
+    "column": 5
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "cafes",
+    "value": "cafes",
+    "line": 14,
+    "column": 12
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 14,
+    "column": 18
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "cafes",
+    "value": "cafes",
+    "line": 14,
+    "column": 20
+  },
+  {
+    "kind": "+",
+    "lexeme": "+",
+    "value": "+",
+    "line": 14,
+    "column": 26
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "1",
+    "value": 1,
+    "line": 14,
+    "column": 28
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 14,
+    "column": 29
+  },
+  {
+    "kind": "RECEBA",
+    "lexeme": "RECEBA",
+    "value": "RECEBA",
+    "line": 16,
+    "column": 5
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "energia",
+    "value": "energia",
+    "line": 16,
+    "column": 12
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 16,
+    "column": 20
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "energia",
+    "value": "energia",
+    "line": 16,
+    "column": 22
+  },
+  {
+    "kind": "+",
+    "lexeme": "+",
+    "value": "+",
+    "line": 16,
+    "column": 30
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "2",
+    "value": 2,
+    "line": 16,
+    "column": 32
+  },
+  {
+    "kind": "+",
+    "lexeme": "+",
+    "value": "+",
+    "line": 16,
+    "column": 34
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "3",
+    "value": 3,
+    "line": 16,
+    "column": 36
+  },
+  {
+    "kind": "*",
+    "lexeme": "*",
+    "value": "*",
+    "line": 16,
+    "column": 38
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "4",
+    "value": 4,
+    "line": 16,
+    "column": 40
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 16,
+    "column": 41
+  },
+  {
+    "kind": "RECEBA",
+    "lexeme": "RECEBA",
+    "value": "RECEBA",
+    "line": 17,
+    "column": 5
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "gasto",
+    "value": "gasto",
+    "line": 17,
+    "column": 12
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 17,
+    "column": 18
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "cafes",
+    "value": "cafes",
+    "line": 17,
+    "column": 20
+  },
+  {
+    "kind": "*",
+    "lexeme": "*",
+    "value": "*",
+    "line": 17,
+    "column": 26
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "preco",
+    "value": "preco",
+    "line": 17,
+    "column": 28
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 17,
+    "column": 33
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 18,
+    "column": 5
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 18,
+    "column": 17
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Cafés:\"",
+    "value": "Cafés:",
+    "line": 18,
+    "column": 18
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 18,
+    "column": 26
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "cafes",
+    "value": "cafes",
+    "line": 18,
+    "column": 28
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 18,
+    "column": 33
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Energia:\"",
+    "value": "Energia:",
+    "line": 18,
+    "column": 35
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 18,
+    "column": 45
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "energia",
+    "value": "energia",
+    "line": 18,
+    "column": 47
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 18,
+    "column": 54
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 18,
+    "column": 55
+  },
+  {
+    "kind": "E_VERDADE_ESSE_BILETE",
+    "lexeme": "E_VERDADE_ESSE_BILETE",
+    "value": "E_VERDADE_ESSE_BILETE",
+    "line": 20,
+    "column": 5
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 20,
+    "column": 27
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "energia",
+    "value": "energia",
+    "line": 20,
+    "column": 28
+  },
+  {
+    "kind": ">=",
+    "lexeme": ">=",
+    "value": ">=",
+    "line": 20,
+    "column": 36
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "67",
+    "value": 67,
+    "line": 20,
+    "column": 39
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 20,
+    "column": 41
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 21,
+    "column": 9
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 21,
+    "column": 21
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Já estou elétrico!\"",
+    "value": "Já estou elétrico!",
+    "line": 21,
+    "column": 22
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 21,
+    "column": 42
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 21,
+    "column": 43
+  },
+  {
+    "kind": "DESCANSAR_NE",
+    "lexeme": "DESCANSAR_NE",
+    "value": "DESCANSAR_NE",
+    "line": 22,
+    "column": 9
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 22,
+    "column": 21
+  },
+  {
+    "kind": "SO_QUE_NAO",
+    "lexeme": "SO_QUE_NAO",
+    "value": "SO_QUE_NAO",
+    "line": 23,
+    "column": 5
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 24,
+    "column": 9
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 24,
+    "column": 21
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "pedido",
+    "value": "pedido",
+    "line": 24,
+    "column": 22
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 24,
+    "column": 28
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 24,
+    "column": 29
+  },
+  {
+    "kind": "ATA",
+    "lexeme": "ATA",
+    "value": "ATA",
+    "line": 25,
+    "column": 5
+  },
+  {
+    "kind": "ATA",
+    "lexeme": "ATA",
+    "value": "ATA",
+    "line": 26,
+    "column": 1
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 28,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 28,
+    "column": 13
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Energia final:\"",
+    "value": "Energia final:",
+    "line": 28,
+    "column": 14
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 28,
+    "column": 30
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "energia",
+    "value": "energia",
+    "line": 28,
+    "column": 32
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 28,
+    "column": 39
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 28,
+    "column": 40
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 29,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 29,
+    "column": 13
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Gasto:\"",
+    "value": "Gasto:",
+    "line": 29,
+    "column": 14
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 29,
+    "column": 22
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "gasto",
+    "value": "gasto",
+    "line": 29,
+    "column": 24
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 29,
+    "column": 29
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 29,
+    "column": 30
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 30,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 30,
+    "column": 13
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Precedência:\"",
+    "value": "Precedência:",
+    "line": 30,
+    "column": 14
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 30,
+    "column": 28
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "2",
+    "value": 2,
+    "line": 30,
+    "column": 30
+  },
+  {
+    "kind": "+",
+    "lexeme": "+",
+    "value": "+",
+    "line": 30,
+    "column": 32
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "3",
+    "value": 3,
+    "line": 30,
+    "column": 34
+  },
+  {
+    "kind": "*",
+    "lexeme": "*",
+    "value": "*",
+    "line": 30,
+    "column": 36
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "4",
+    "value": 4,
+    "line": 30,
+    "column": 38
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 30,
+    "column": 39
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 30,
+    "column": 40
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 31,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 31,
+    "column": 13
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Parênteses:\"",
+    "value": "Parênteses:",
+    "line": 31,
+    "column": 14
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 31,
+    "column": 27
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 31,
+    "column": 29
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "2",
+    "value": 2,
+    "line": 31,
+    "column": 30
+  },
+  {
+    "kind": "+",
+    "lexeme": "+",
+    "value": "+",
+    "line": 31,
+    "column": 32
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "3",
+    "value": 3,
+    "line": 31,
+    "column": 34
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 31,
+    "column": 35
+  },
+  {
+    "kind": "*",
+    "lexeme": "*",
+    "value": "*",
+    "line": 31,
+    "column": 37
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "4",
+    "value": 4,
+    "line": 31,
+    "column": 39
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 31,
+    "column": 40
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 31,
+    "column": 41
+  },
+  {
+    "kind": "ACABOU",
+    "lexeme": "ACABOU",
+    "value": "ACABOU",
+    "line": 33,
+    "column": 1
+  },
+  {
+    "kind": "EOF",
+    "lexeme": "",
+    "value": null,
+    "line": 34,
+    "column": 1
+  }
+]

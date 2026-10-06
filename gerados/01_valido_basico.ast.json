@@ -1,0 +1,79 @@
+{
+  "node": "Program",
+  "declarations": [
+    {
+      "node": "VarDecl",
+      "type_name": "inteiro",
+      "name": "numero",
+      "initializer": {
+        "node": "Literal",
+        "value": 67,
+        "type_name": "inteiro",
+        "line": 3,
+        "column": 24
+      },
+      "line": 3,
+      "column": 15
+    },
+    {
+      "node": "VarDecl",
+      "type_name": "texto",
+      "name": "mensagem",
+      "initializer": {
+        "node": "Literal",
+        "value": "Receba!",
+        "type_name": "texto",
+        "line": 4,
+        "column": 24
+      },
+      "line": 4,
+      "column": 13
+    }
+  ],
+  "statements": [
+    {
+      "node": "Assign",
+      "name": "numero",
+      "expression": {
+        "node": "Binary",
+        "left": {
+          "node": "Variable",
+          "name": "numero",
+          "line": 6,
+          "column": 17
+        },
+        "operator": "+",
+        "right": {
+          "node": "Literal",
+          "value": 1,
+          "type_name": "inteiro",
+          "line": 6,
+          "column": 26
+        },
+        "line": 6,
+        "column": 24
+      },
+      "line": 6,
+      "column": 8
+    },
+    {
+      "node": "Print",
+      "expressions": [
+        {
+          "node": "Variable",
+          "name": "mensagem",
+          "line": 7,
+          "column": 14
+        },
+        {
+          "node": "Variable",
+          "name": "numero",
+          "line": 7,
+          "column": 24
+        }
+      ],
+      "line": 7,
+      "column": 1
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "node": "Program",
+  "declarations": [
+    {
+      "node": "VarDecl",
+      "type_name": "inteiro",
+      "name": "print",
+      "initializer": {
+        "node": "Literal",
+        "value": 67,
+        "type_name": "inteiro",
+        "line": 2,
+        "column": 23
+      },
+      "line": 2,
+      "column": 15
+    },
+    {
+      "node": "VarDecl",
+      "type_name": "real",
+      "name": "class",
+      "initializer": {
+        "node": "Literal",
+        "value": 0,
+        "type_name": "inteiro",
+        "line": 3,
+        "column": 20
+      },
+      "line": 3,
+      "column": 12
+    },
+    {
+      "node": "VarDecl",
+      "type_name": "texto",
+      "name": "nome",
+      "initializer": {
+        "node": "Literal",
+        "value": "",
+        "type_name": "texto",
+        "line": 4,
+        "column": 20
+      },
+      "line": 4,
+      "column": 13
+    }
+  ],
+  "statements": [
+    {
+      "node": "Read",
+      "name": "nome",
+      "line": 5,
+      "column": 12
+    },
+    {
+      "node": "Read",
+      "name": "class",
+      "line": 6,
+      "column": 12
+    },
+    {
+      "node": "Assign",
+      "name": "class",
+      "expression": {
+        "node": "Binary",
+        "left": {
+          "node": "Variable",
+          "name": "class",
+          "line": 7,
+          "column": 16
+        },
+        "operator": "/",
+        "right": {
+          "node": "Literal",
+          "value": 2,
+          "type_name": "inteiro",
+          "line": 7,
+          "column": 24
+        },
+        "line": 7,
+        "column": 22
+      },
+      "line": 7,
+      "column": 8
+    },
+    {
+      "node": "Print",
+      "expressions": [
+        {
+          "node": "Variable",
+          "name": "nome",
+          "line": 8,
+          "column": 14
+        },
+        {
+          "node": "Variable",
+          "name": "print",
+          "line": 8,
+          "column": 20
+        },
+        {
+          "node": "Variable",
+          "name": "class",
+          "line": 8,
+          "column": 27
+        }
+      ],
+      "line": 8,
+      "column": 1
+    },
+    {
+      "node": "Print",
+      "expressions": [
+        {
+          "node": "Literal",
+          "value": "Texto:",
+          "type_name": "texto",
+          "line": 9,
+          "column": 14
+        },
+        {
+          "node": "Binary",
+          "left": {
+            "node": "Literal",
+            "value": "ATA",
+            "type_name": "texto",
+            "line": 9,
+            "column": 24
+          },
+          "operator": "==",
+          "right": {
+            "node": "Literal",
+            "value": "ATA",
+            "type_name": "texto",
+            "line": 9,
+            "column": 33
+          },
+          "line": 9,
+          "column": 30
+        }
+      ],
+      "line": 9,
+      "column": 1
+    }
+  ]
+}

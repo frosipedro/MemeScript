@@ -1,0 +1,191 @@
+[
+  {
+    "kind": "ACORDA_PEDRINHO",
+    "lexeme": "ACORDA_PEDRINHO",
+    "value": "ACORDA_PEDRINHO",
+    "line": 1,
+    "column": 1
+  },
+  {
+    "kind": "SABOR_INTEIRO",
+    "lexeme": "SABOR_INTEIRO",
+    "value": "SABOR_INTEIRO",
+    "line": 3,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "numero",
+    "value": "numero",
+    "line": 3,
+    "column": 15
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 3,
+    "column": 22
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "67",
+    "value": 67,
+    "line": 3,
+    "column": 24
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 3,
+    "column": 26
+  },
+  {
+    "kind": "SABOR_TEXTO",
+    "lexeme": "SABOR_TEXTO",
+    "value": "SABOR_TEXTO",
+    "line": 4,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "mensagem",
+    "value": "mensagem",
+    "line": 4,
+    "column": 13
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 4,
+    "column": 22
+  },
+  {
+    "kind": "STRING",
+    "lexeme": "\"Receba!\"",
+    "value": "Receba!",
+    "line": 4,
+    "column": 24
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 4,
+    "column": 33
+  },
+  {
+    "kind": "RECEBA",
+    "lexeme": "RECEBA",
+    "value": "RECEBA",
+    "line": 6,
+    "column": 1
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "numero",
+    "value": "numero",
+    "line": 6,
+    "column": 8
+  },
+  {
+    "kind": "=",
+    "lexeme": "=",
+    "value": "=",
+    "line": 6,
+    "column": 15
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "numero",
+    "value": "numero",
+    "line": 6,
+    "column": 17
+  },
+  {
+    "kind": "+",
+    "lexeme": "+",
+    "value": "+",
+    "line": 6,
+    "column": 24
+  },
+  {
+    "kind": "INTEGER",
+    "lexeme": "1",
+    "value": 1,
+    "line": 6,
+    "column": 26
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 6,
+    "column": 27
+  },
+  {
+    "kind": "AMOSTRADINHO",
+    "lexeme": "AMOSTRADINHO",
+    "value": "AMOSTRADINHO",
+    "line": 7,
+    "column": 1
+  },
+  {
+    "kind": "(",
+    "lexeme": "(",
+    "value": "(",
+    "line": 7,
+    "column": 13
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "mensagem",
+    "value": "mensagem",
+    "line": 7,
+    "column": 14
+  },
+  {
+    "kind": ",",
+    "lexeme": ",",
+    "value": ",",
+    "line": 7,
+    "column": 22
+  },
+  {
+    "kind": "IDENTIFIER",
+    "lexeme": "numero",
+    "value": "numero",
+    "line": 7,
+    "column": 24
+  },
+  {
+    "kind": ")",
+    "lexeme": ")",
+    "value": ")",
+    "line": 7,
+    "column": 30
+  },
+  {
+    "kind": ";",
+    "lexeme": ";",
+    "value": ";",
+    "line": 7,
+    "column": 31
+  },
+  {
+    "kind": "ACABOU",
+    "lexeme": "ACABOU",
+    "value": "ACABOU",
+    "line": 9,
+    "column": 1
+  },
+  {
+    "kind": "EOF",
+    "lexeme": "",
+    "value": null,
+    "line": 10,
+    "column": 1
+  }
+]

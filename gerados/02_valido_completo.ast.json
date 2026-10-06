@@ -1,0 +1,463 @@
+{
+  "node": "Program",
+  "declarations": [
+    {
+      "node": "VarDecl",
+      "type_name": "inteiro",
+      "name": "energia",
+      "initializer": {
+        "node": "Literal",
+        "value": 0,
+        "type_name": "inteiro",
+        "line": 3,
+        "column": 25
+      },
+      "line": 3,
+      "column": 15
+    },
+    {
+      "node": "VarDecl",
+      "type_name": "inteiro",
+      "name": "cafes",
+      "initializer": {
+        "node": "Literal",
+        "value": 0,
+        "type_name": "inteiro",
+        "line": 4,
+        "column": 23
+      },
+      "line": 4,
+      "column": 15
+    },
+    {
+      "node": "VarDecl",
+      "type_name": "inteiro",
+      "name": "limite",
+      "initializer": {
+        "node": "Literal",
+        "value": 0,
+        "type_name": "inteiro",
+        "line": 5,
+        "column": 24
+      },
+      "line": 5,
+      "column": 15
+    },
+    {
+      "node": "VarDecl",
+      "type_name": "real",
+      "name": "preco",
+      "initializer": {
+        "node": "Literal",
+        "value": 4.5,
+        "type_name": "real",
+        "line": 6,
+        "column": 20
+      },
+      "line": 6,
+      "column": 12
+    },
+    {
+      "node": "VarDecl",
+      "type_name": "real",
+      "name": "gasto",
+      "initializer": {
+        "node": "Literal",
+        "value": 0,
+        "type_name": "inteiro",
+        "line": 7,
+        "column": 20
+      },
+      "line": 7,
+      "column": 12
+    },
+    {
+      "node": "VarDecl",
+      "type_name": "texto",
+      "name": "pedido",
+      "initializer": {
+        "node": "Literal",
+        "value": "QUERO CAFEEEEEEE!",
+        "type_name": "texto",
+        "line": 8,
+        "column": 22
+      },
+      "line": 8,
+      "column": 13
+    }
+  ],
+  "statements": [
+    {
+      "node": "Print",
+      "expressions": [
+        {
+          "node": "Literal",
+          "value": "Qual o limite de cafés?",
+          "type_name": "texto",
+          "line": 10,
+          "column": 14
+        }
+      ],
+      "line": 10,
+      "column": 1
+    },
+    {
+      "node": "Read",
+      "name": "limite",
+      "line": 11,
+      "column": 12
+    },
+    {
+      "node": "While",
+      "condition": {
+        "node": "Binary",
+        "left": {
+          "node": "Variable",
+          "name": "cafes",
+          "line": 13,
+          "column": 12
+        },
+        "operator": "<",
+        "right": {
+          "node": "Variable",
+          "name": "limite",
+          "line": 13,
+          "column": 20
+        },
+        "line": 13,
+        "column": 18
+      },
+      "body": [
+        {
+          "node": "Assign",
+          "name": "cafes",
+          "expression": {
+            "node": "Binary",
+            "left": {
+              "node": "Variable",
+              "name": "cafes",
+              "line": 14,
+              "column": 20
+            },
+            "operator": "+",
+            "right": {
+              "node": "Literal",
+              "value": 1,
+              "type_name": "inteiro",
+              "line": 14,
+              "column": 28
+            },
+            "line": 14,
+            "column": 26
+          },
+          "line": 14,
+          "column": 12
+        },
+        {
+          "node": "Assign",
+          "name": "energia",
+          "expression": {
+            "node": "Binary",
+            "left": {
+              "node": "Binary",
+              "left": {
+                "node": "Variable",
+                "name": "energia",
+                "line": 16,
+                "column": 22
+              },
+              "operator": "+",
+              "right": {
+                "node": "Literal",
+                "value": 2,
+                "type_name": "inteiro",
+                "line": 16,
+                "column": 32
+              },
+              "line": 16,
+              "column": 30
+            },
+            "operator": "+",
+            "right": {
+              "node": "Binary",
+              "left": {
+                "node": "Literal",
+                "value": 3,
+                "type_name": "inteiro",
+                "line": 16,
+                "column": 36
+              },
+              "operator": "*",
+              "right": {
+                "node": "Literal",
+                "value": 4,
+                "type_name": "inteiro",
+                "line": 16,
+                "column": 40
+              },
+              "line": 16,
+              "column": 38
+            },
+            "line": 16,
+            "column": 34
+          },
+          "line": 16,
+          "column": 12
+        },
+        {
+          "node": "Assign",
+          "name": "gasto",
+          "expression": {
+            "node": "Binary",
+            "left": {
+              "node": "Variable",
+              "name": "cafes",
+              "line": 17,
+              "column": 20
+            },
+            "operator": "*",
+            "right": {
+              "node": "Variable",
+              "name": "preco",
+              "line": 17,
+              "column": 28
+            },
+            "line": 17,
+            "column": 26
+          },
+          "line": 17,
+          "column": 12
+        },
+        {
+          "node": "Print",
+          "expressions": [
+            {
+              "node": "Literal",
+              "value": "Cafés:",
+              "type_name": "texto",
+              "line": 18,
+              "column": 18
+            },
+            {
+              "node": "Variable",
+              "name": "cafes",
+              "line": 18,
+              "column": 28
+            },
+            {
+              "node": "Literal",
+              "value": "Energia:",
+              "type_name": "texto",
+              "line": 18,
+              "column": 35
+            },
+            {
+              "node": "Variable",
+              "name": "energia",
+              "line": 18,
+              "column": 47
+            }
+          ],
+          "line": 18,
+          "column": 5
+        },
+        {
+          "node": "If",
+          "condition": {
+            "node": "Binary",
+            "left": {
+              "node": "Variable",
+              "name": "energia",
+              "line": 20,
+              "column": 28
+            },
+            "operator": ">=",
+            "right": {
+              "node": "Literal",
+              "value": 67,
+              "type_name": "inteiro",
+              "line": 20,
+              "column": 39
+            },
+            "line": 20,
+            "column": 36
+          },
+          "then_body": [
+            {
+              "node": "Print",
+              "expressions": [
+                {
+                  "node": "Literal",
+                  "value": "Já estou elétrico!",
+                  "type_name": "texto",
+                  "line": 21,
+                  "column": 22
+                }
+              ],
+              "line": 21,
+              "column": 9
+            },
+            {
+              "node": "Break",
+              "line": 22,
+              "column": 9
+            }
+          ],
+          "else_body": [
+            {
+              "node": "Print",
+              "expressions": [
+                {
+                  "node": "Variable",
+                  "name": "pedido",
+                  "line": 24,
+                  "column": 22
+                }
+              ],
+              "line": 24,
+              "column": 9
+            }
+          ],
+          "line": 20,
+          "column": 5
+        }
+      ],
+      "line": 13,
+      "column": 1
+    },
+    {
+      "node": "Print",
+      "expressions": [
+        {
+          "node": "Literal",
+          "value": "Energia final:",
+          "type_name": "texto",
+          "line": 28,
+          "column": 14
+        },
+        {
+          "node": "Variable",
+          "name": "energia",
+          "line": 28,
+          "column": 32
+        }
+      ],
+      "line": 28,
+      "column": 1
+    },
+    {
+      "node": "Print",
+      "expressions": [
+        {
+          "node": "Literal",
+          "value": "Gasto:",
+          "type_name": "texto",
+          "line": 29,
+          "column": 14
+        },
+        {
+          "node": "Variable",
+          "name": "gasto",
+          "line": 29,
+          "column": 24
+        }
+      ],
+      "line": 29,
+      "column": 1
+    },
+    {
+      "node": "Print",
+      "expressions": [
+        {
+          "node": "Literal",
+          "value": "Precedência:",
+          "type_name": "texto",
+          "line": 30,
+          "column": 14
+        },
+        {
+          "node": "Binary",
+          "left": {
+            "node": "Literal",
+            "value": 2,
+            "type_name": "inteiro",
+            "line": 30,
+            "column": 30
+          },
+          "operator": "+",
+          "right": {
+            "node": "Binary",
+            "left": {
+              "node": "Literal",
+              "value": 3,
+              "type_name": "inteiro",
+              "line": 30,
+              "column": 34
+            },
+            "operator": "*",
+            "right": {
+              "node": "Literal",
+              "value": 4,
+              "type_name": "inteiro",
+              "line": 30,
+              "column": 38
+            },
+            "line": 30,
+            "column": 36
+          },
+          "line": 30,
+          "column": 32
+        }
+      ],
+      "line": 30,
+      "column": 1
+    },
+    {
+      "node": "Print",
+      "expressions": [
+        {
+          "node": "Literal",
+          "value": "Parênteses:",
+          "type_name": "texto",
+          "line": 31,
+          "column": 14
+        },
+        {
+          "node": "Binary",
+          "left": {
+            "node": "Binary",
+            "left": {
+              "node": "Literal",
+              "value": 2,
+              "type_name": "inteiro",
+              "line": 31,
+              "column": 30
+            },
+            "operator": "+",
+            "right": {
+              "node": "Literal",
+              "value": 3,
+              "type_name": "inteiro",
+              "line": 31,
+              "column": 34
+            },
+            "line": 31,
+            "column": 32
+          },
+          "operator": "*",
+          "right": {
+            "node": "Literal",
+            "value": 4,
+            "type_name": "inteiro",
+            "line": 31,
+            "column": 39
+          },
+          "line": 31,
+          "column": 37
+        }
+      ],
+      "line": 31,
+      "column": 1
+    }
+  ]
+}

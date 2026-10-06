@@ -1,0 +1,25 @@
+program = "ACORDA_PEDRINHO", { declaration },
+          { statement }, "ACABOU" ;
+
+declaration = type, IDENTIFIER, "=", expression, ";" ;
+type = "SABOR_INTEIRO" | "SABOR_REAL" | "SABOR_TEXTO" ;
+block = { statement } ;
+statement = assignment | input | output | if_stmt
+          | while_stmt | break_stmt ;
+
+assignment = "RECEBA", IDENTIFIER, "=", expression, ";" ;
+input = "QUERO_CAFE", "(", IDENTIFIER, ")", ";" ;
+output = "AMOSTRADINHO", "(", expression,
+         { ",", expression }, ")", ";" ;
+if_stmt = "E_VERDADE_ESSE_BILETE", "(", expression, ")",
+          block, [ "SO_QUE_NAO", block ], "ATA" ;
+while_stmt = "BORA_BILL", "(", expression, ")", block, "ATA" ;
+break_stmt = "DESCANSAR_NE", ";" ;
+
+expression = additive, [ relop, additive ] ;
+relop = "==" | "!=" | "<" | "<=" | ">" | ">=" ;
+additive = multiplicative, { ( "+" | "-" ), multiplicative } ;
+multiplicative = unary, { ( "*" | "/" ), unary } ;
+unary = ( "+" | "-" ), unary | primary ;
+primary = INTEGER | REAL | STRING | IDENTIFIER
+        | "(", expression, ")" ;
