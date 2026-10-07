@@ -8,9 +8,9 @@ from .errors import CompileError
 
 KEYWORDS = {
     word: word for word in (
-        "ACORDA_PEDRINHO", "ACABOU", "SABOR_INTEIRO", "SABOR_REAL",
+        "E_HORA_DO_SHOW", "JA_ACABOU_JESSICA", "SABOR_INTEIRO", "SABOR_REAL",
         "SABOR_TEXTO", "RECEBA", "QUERO_CAFE", "AMOSTRADINHO",
-        "E_VERDADE_ESSE_BILETE", "SO_QUE_NAO", "BORA_BILL",
+        "PODE_ISSO_ARNALDO", "ERROU", "BORA_BILL",
         "DESCANSAR_NE", "ATA",
     )
 }

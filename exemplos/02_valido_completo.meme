@@ -1,4 +1,4 @@
-ACORDA_PEDRINHO
+E_HORA_DO_SHOW
 
 SABOR_INTEIRO energia = 0;
 SABOR_INTEIRO cafes = 0;
@@ -17,10 +17,10 @@ BORA_BILL (cafes < limite)
     RECEBA gasto = cafes * preco;
     AMOSTRADINHO("Cafés:", cafes, "Energia:", energia);
 
-    E_VERDADE_ESSE_BILETE (energia >= 67)
+    PODE_ISSO_ARNALDO (energia >= 67)
         AMOSTRADINHO("Já estou elétrico!");
         DESCANSAR_NE;
-    SO_QUE_NAO
+    ERROU
         AMOSTRADINHO(pedido);
     ATA
 ATA
@@ -30,4 +30,4 @@ AMOSTRADINHO("Gasto:", gasto);
 AMOSTRADINHO("Precedência:", 2 + 3 * 4);
 AMOSTRADINHO("Parênteses:", (2 + 3) * 4);
 
-ACABOU
+JA_ACABOU_JESSICA

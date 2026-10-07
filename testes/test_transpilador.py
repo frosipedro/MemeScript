@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def program(body):
-    return "ACORDA_PEDRINHO\n" + body + "\nACABOU"
+    return "E_HORA_DO_SHOW\n" + body + "\nJA_ACABOU_JESSICA"
 
 
 def execute(source, inputs=()):
@@ -80,12 +80,12 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(output, "True True True True True True\n")
 
     def test_empty_blocks_and_program(self):
-        source = program("E_VERDADE_ESSE_BILETE (1==2)\nSO_QUE_NAO\nATA\nBORA_BILL (1==2)\nATA")
+        source = program("PODE_ISSO_ARNALDO (1==2)\nERROU\nATA\nBORA_BILL (1==2)\nATA")
         self.assertEqual(execute(source)[0], "")
         self.assertIn("pass", compile_source(program("")).python)
 
     def test_syntax_failures(self):
-        bodies = ["SABOR_INTEIRO x = ;", "AMOSTRADINHO(1)", "AMOSTRADINHO();", "SO_QUE_NAO", "BORA_BILL (1<2)\nAMOSTRADINHO(1);", "AMOSTRADINHO(1<2<3);", "AMOSTRADINHO(1);\nSABOR_INTEIRO x=0;", "BORA_BILL (1<2)\nSABOR_INTEIRO x=0;\nATA"]
+        bodies = ["SABOR_INTEIRO x = ;", "AMOSTRADINHO(1)", "AMOSTRADINHO();", "ERROU", "BORA_BILL (1<2)\nAMOSTRADINHO(1);", "AMOSTRADINHO(1<2<3);", "AMOSTRADINHO(1);\nSABOR_INTEIRO x=0;", "BORA_BILL (1<2)\nSABOR_INTEIRO x=0;\nATA"]
         for body in bodies:
             with self.subTest(body=body), self.assertRaises(CompileError) as context:
                 compile_source(program(body))
@@ -131,7 +131,7 @@ class SemanticTests(unittest.TestCase):
 
     def test_invalid_conditions(self):
         self.reject("BORA_BILL (67)\nATA", "condição")
-        self.reject('E_VERDADE_ESSE_BILETE ("sim")\nATA', "condição")
+        self.reject('PODE_ISSO_ARNALDO ("sim")\nATA', "condição")
 
     def test_comparison_type_rules(self):
         self.reject('AMOSTRADINHO("a"<"b");', "incompatível")
@@ -140,7 +140,7 @@ class SemanticTests(unittest.TestCase):
 
     def test_break_outside_loop(self):
         self.reject("DESCANSAR_NE;", "dentro de BORA_BILL")
-        self.reject("E_VERDADE_ESSE_BILETE (1==1)\nDESCANSAR_NE;\nATA", "dentro de BORA_BILL")
+        self.reject("PODE_ISSO_ARNALDO (1==1)\nDESCANSAR_NE;\nATA", "dentro de BORA_BILL")
 
     def test_numeric_promotion(self):
         output, namespace = execute(program("SABOR_REAL r=1; RECEBA r=2; AMOSTRADINHO(r);"))
@@ -177,7 +177,7 @@ class IntegrationTests(unittest.TestCase):
         self.assertEqual(execute(source)[0], "1 2 3\n")
 
     def test_string_contents_are_not_code(self):
-        text = 'ATA ACABOU __import__("os") # RECEBA'
+        text = 'ATA JA_ACABOU_JESSICA __import__("os") # RECEBA'
         self.assertEqual(execute(program("AMOSTRADINHO(" + json.dumps(text) + ");"))[0], text + "\n")
 
     def test_invalid_example_categories(self):

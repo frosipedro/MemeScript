@@ -1,9 +1,8 @@
 Validação da MemeScript 1.0
-Python 3.12.14 em Linux
+Vocabulário atualizado: E_HORA_DO_SHOW, JA_ACABOU_JESSICA, PODE_ISSO_ARNALDO e ERROU.
+Ambiente: Linux / Python 3.12.14
 
-
-Comando: python -m unittest discover -s testes -v
-Código de saída: 0
+$ python -m unittest discover -s testes -v
 test_cli_check_does_not_write (test_transpilador.IntegrationTests.test_cli_check_does_not_write) ... ok
 test_cli_error_does_not_write_or_overwrite (test_transpilador.IntegrationTests.test_cli_error_does_not_write_or_overwrite) ... ok
 test_cli_success_and_debug (test_transpilador.IntegrationTests.test_cli_success_and_debug) ... ok
@@ -38,13 +37,13 @@ test_type_errors (test_transpilador.SemanticTests.test_type_errors) ... ok
 test_undeclared_read_write_and_expression (test_transpilador.SemanticTests.test_undeclared_read_write_and_expression) ... ok
 
 ----------------------------------------------------------------------
-Ran 32 tests in 0.236s
+Ran 32 tests in 0.216s
 
 OK
 
-
-Comando: python demo.py
 Código de saída: 0
+
+$ python demo.py
 
 === 01_valido_basico ===
 ACERTOU, MISERAVI! Python gerado em: ./gerados/01_valido_basico.py
@@ -98,3 +97,5 @@ Erro semântico na linha 2, coluna 8: variável 'numero' usada antes da declara�
 Erro semântico na linha 3, coluna 12: declaração duplicada de 'numero' no escopo global
 Erro semântico na linha 3, coluna 8: atribuição incompatível: esperado inteiro, recebido texto
 Erro semântico na linha 2, coluna 1: DESCANSAR_NE só pode aparecer dentro de BORA_BILL
+
+Código de saída: 0

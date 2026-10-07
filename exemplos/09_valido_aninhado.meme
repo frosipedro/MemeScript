@@ -1,11 +1,11 @@
-ACORDA_PEDRINHO
+E_HORA_DO_SHOW
 SABOR_INTEIRO i = 0;
 SABOR_INTEIRO j = 0;
 BORA_BILL (i < 2)
     RECEBA j = 0;
     BORA_BILL (j < 3)
         RECEBA j = j + 1;
-        E_VERDADE_ESSE_BILETE (j == 2)
+        PODE_ISSO_ARNALDO (j == 2)
             DESCANSAR_NE;
         ATA
         AMOSTRADINHO(i, j);
@@ -13,4 +13,4 @@ BORA_BILL (i < 2)
     RECEBA i = i + 1;
 ATA
 AMOSTRADINHO("Fim:", i, j);
-ACABOU
+JA_ACABOU_JESSICA

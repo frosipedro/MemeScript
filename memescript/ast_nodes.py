@@ -70,7 +70,7 @@ class Print:
 class If:
     condition: object
     then_body: list
-    else_body: object  # None significa ausência de SO_QUE_NAO.
+    else_body: object  # None significa ausência de ERROU.
     line: int
     column: int
 

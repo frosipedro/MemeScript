@@ -1,8 +1,8 @@
 [
   {
-    "kind": "ACORDA_PEDRINHO",
-    "lexeme": "ACORDA_PEDRINHO",
-    "value": "ACORDA_PEDRINHO",
+    "kind": "E_HORA_DO_SHOW",
+    "lexeme": "E_HORA_DO_SHOW",
+    "value": "E_HORA_DO_SHOW",
     "line": 1,
     "column": 1
   },
@@ -581,9 +581,9 @@
     "column": 55
   },
   {
-    "kind": "E_VERDADE_ESSE_BILETE",
-    "lexeme": "E_VERDADE_ESSE_BILETE",
-    "value": "E_VERDADE_ESSE_BILETE",
+    "kind": "PODE_ISSO_ARNALDO",
+    "lexeme": "PODE_ISSO_ARNALDO",
+    "value": "PODE_ISSO_ARNALDO",
     "line": 20,
     "column": 5
   },
@@ -592,35 +592,35 @@
     "lexeme": "(",
     "value": "(",
     "line": 20,
-    "column": 27
+    "column": 23
   },
   {
     "kind": "IDENTIFIER",
     "lexeme": "energia",
     "value": "energia",
     "line": 20,
-    "column": 28
+    "column": 24
   },
   {
     "kind": ">=",
     "lexeme": ">=",
     "value": ">=",
     "line": 20,
-    "column": 36
+    "column": 32
   },
   {
     "kind": "INTEGER",
     "lexeme": "67",
     "value": 67,
     "line": 20,
-    "column": 39
+    "column": 35
   },
   {
     "kind": ")",
     "lexeme": ")",
     "value": ")",
     "line": 20,
-    "column": 41
+    "column": 37
   },
   {
     "kind": "AMOSTRADINHO",
@@ -672,9 +672,9 @@
     "column": 21
   },
   {
-    "kind": "SO_QUE_NAO",
-    "lexeme": "SO_QUE_NAO",
-    "value": "SO_QUE_NAO",
+    "kind": "ERROU",
+    "lexeme": "ERROU",
+    "value": "ERROU",
     "line": 23,
     "column": 5
   },
@@ -994,9 +994,9 @@
     "column": 41
   },
   {
-    "kind": "ACABOU",
-    "lexeme": "ACABOU",
-    "value": "ACABOU",
+    "kind": "JA_ACABOU_JESSICA",
+    "lexeme": "JA_ACABOU_JESSICA",
+    "value": "JA_ACABOU_JESSICA",
     "line": 33,
     "column": 1
   },

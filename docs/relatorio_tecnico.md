@@ -30,16 +30,16 @@ Os significados abaixo são decisões da linguagem. O uso do prefixo SABOR adapt
 
 | Palavra reservada | Papel na linguagem |
 | --- | --- |
-| ACORDA_PEDRINHO | Delimita o início do programa |
-| ACABOU | Delimita o fim do programa |
+| E_HORA_DO_SHOW | Delimita o início do programa |
+| JA_ACABOU_JESSICA | Delimita o fim do programa |
 | SABOR_INTEIRO | Declara variável inteira |
 | SABOR_REAL | Declara variável real |
 | SABOR_TEXTO | Declara variável de texto |
 | RECEBA | Atribui a uma variável já declarada |
 | QUERO_CAFE | Lê um valor conforme o tipo da variável |
 | AMOSTRADINHO | Exibe uma ou mais expressões |
-| E_VERDADE_ESSE_BILETE | Abre um condicional |
-| SO_QUE_NAO | Introduz a alternativa do condicional |
+| PODE_ISSO_ARNALDO | Abre um condicional |
+| ERROU | Introduz a alternativa do condicional |
 | BORA_BILL | Abre um laço controlado por condição |
 | DESCANSAR_NE | Interrompe o laço mais próximo |
 | ATA | Fecha um condicional inteiro ou um laço |
@@ -85,7 +85,7 @@ Cada uma das treze palavras da tabela de vocabulário é um padrão literal comp
 
 | Tokens emitidos | Padrão | Exemplo | Função |
 | --- | --- | --- | --- |
-| ACORDA_PEDRINHO até ATA | Literal exato do vocabulário | `RECEBA` | Treze reservadas |
+| E_HORA_DO_SHOW até ATA | Literal exato do vocabulário | `RECEBA` | Treze reservadas |
 | + e - | `[+-]` | `+` | Soma, subtração ou sinal unário |
 | * e / | `[*/]` | `*` | Multiplicação e divisão |
 | = | `=` | `=` | Inicialização e atribuição |
@@ -117,10 +117,10 @@ V = { program, declaration, type, block, statement,
       break_stmt, expression, relop, additive,
       multiplicative, unary, primary }
 
-T = { ACORDA_PEDRINHO, ACABOU, SABOR_INTEIRO,
+T = { E_HORA_DO_SHOW, JA_ACABOU_JESSICA, SABOR_INTEIRO,
       SABOR_REAL, SABOR_TEXTO, RECEBA, QUERO_CAFE,
-      AMOSTRADINHO, E_VERDADE_ESSE_BILETE,
-      SO_QUE_NAO, BORA_BILL, DESCANSAR_NE, ATA,
+      AMOSTRADINHO, PODE_ISSO_ARNALDO,
+      ERROU, BORA_BILL, DESCANSAR_NE, ATA,
       IDENTIFIER, INTEGER, REAL, STRING,
       "=", "+", "-", "*", "/", "==", "!=",
       "<", "<=", ">", ">=", "(", ")", ",", ";" }
@@ -134,15 +134,15 @@ Da maior para a menor precedência: agrupamento, sinais unários, multiplicaçã
 
 A produção expression aceita no máximo uma comparação por nível. A forma 1 < x < 10 é rejeitada. Resultados de comparações entre parênteses podem aparecer em outras expressões, mas a análise semântica decide se a operação com eles é válida.
 
-Os blocos têm fechamento explícito. O primeiro ATA disponível fecha a construção aberta mais interna. Em um if, SO_QUE_NAO pertence ao mesmo if, e um único ATA fecha seus dois ramos. Essa estrutura elimina a associação ambígua de else.
+Os blocos têm fechamento explícito. O primeiro ATA disponível fecha a construção aberta mais interna. Em um if, ERROU pertence ao mesmo if, e um único ATA fecha seus dois ramos. Essa estrutura elimina a associação ambígua de else.
 
 <!-- PAGEBREAK -->
 
 ## Produções completas em EBNF
 
 ```ebnf
-program = "ACORDA_PEDRINHO", { declaration },
-          { statement }, "ACABOU" ;
+program = "E_HORA_DO_SHOW", { declaration },
+          { statement }, "JA_ACABOU_JESSICA" ;
 
 declaration = type, IDENTIFIER, "=", expression, ";" ;
 type = "SABOR_INTEIRO" | "SABOR_REAL" | "SABOR_TEXTO" ;
@@ -154,8 +154,8 @@ assignment = "RECEBA", IDENTIFIER, "=", expression, ";" ;
 input = "QUERO_CAFE", "(", IDENTIFIER, ")", ";" ;
 output = "AMOSTRADINHO", "(", expression,
          { ",", expression }, ")", ";" ;
-if_stmt = "E_VERDADE_ESSE_BILETE", "(", expression, ")",
-          block, [ "SO_QUE_NAO", block ], "ATA" ;
+if_stmt = "PODE_ISSO_ARNALDO", "(", expression, ")",
+          block, [ "ERROU", block ], "ATA" ;
 while_stmt = "BORA_BILL", "(", expression, ")", block, "ATA" ;
 break_stmt = "DESCANSAR_NE", ";" ;
 
@@ -256,12 +256,12 @@ Todos os nomes recebem o prefixo ms_var_. O mapeamento é injetivo: nomes difere
 Exemplo de fonte:
 
 ```text
-ACORDA_PEDRINHO
+E_HORA_DO_SHOW
 SABOR_INTEIRO numero = 67;
 SABOR_TEXTO mensagem = "Receba!";
 RECEBA numero = numero + 1;
 AMOSTRADINHO(mensagem, numero);
-ACABOU
+JA_ACABOU_JESSICA
 ```
 
 Código gerado, omitindo os comentários de identificação:
@@ -282,7 +282,7 @@ A saída é Receba! 68. A transpilação não executa o destino. A equipe pode e
 O arquivo 02_valido_completo.meme inclui os três tipos, entrada/saída, if/else, while, interrupção e expressões cuja precedência altera o resultado. O código completo entregue é:
 
 ```text
-ACORDA_PEDRINHO
+E_HORA_DO_SHOW
 SABOR_INTEIRO energia = 0;
 SABOR_INTEIRO cafes = 0;
 SABOR_INTEIRO limite = 0;
@@ -296,10 +296,10 @@ BORA_BILL (cafes < limite)
     RECEBA energia = energia + 2 + 3 * 4;
     RECEBA gasto = cafes * preco;
     AMOSTRADINHO("Cafés:", cafes, "Energia:", energia);
-    E_VERDADE_ESSE_BILETE (energia >= 67)
+    PODE_ISSO_ARNALDO (energia >= 67)
         AMOSTRADINHO("Já estou elétrico!");
         DESCANSAR_NE;
-    SO_QUE_NAO
+    ERROU
         AMOSTRADINHO(pedido);
     ATA
 ATA
@@ -307,7 +307,7 @@ AMOSTRADINHO("Energia final:", energia);
 AMOSTRADINHO("Gasto:", gasto);
 AMOSTRADINHO("Precedência:", 2 + 3 * 4);
 AMOSTRADINHO("Parênteses:", (2 + 3) * 4);
-ACABOU
+JA_ACABOU_JESSICA
 ```
 
 O exemplo no diretório exemplos também contém espaços e um comentário explicativo. Com entrada 10, o break ocorre no quinto café, quando a energia chega a 70. O gasto é 22.5. As duas últimas expressões produzem 14 e 20. Com limite 0, o laço não executa e o gasto permanece 0.0.
@@ -385,9 +385,15 @@ https://docs.python.org/3/library/functions.html
 
 https://docs.python.org/3/tutorial/controlflow.html
 
-**Referências temáticas consultadas em 6 de outubro de 2026.** O Museu de Memes registra É verdade esse bilete. A CNN reúne Receba, Bora Bill e Acorda Pedrinho entre os virais de 2022. A Exame descreve o bordão Sabor energético em janeiro de 2026. Os comandos técnicos e a família SABOR são adaptações próprias.
+**Referências temáticas consultadas em 6 de outubro de 2026.** É hora do show inspira a abertura do programa. Já acabou, Jéssica inspira o fechamento. Pode isso, Arnaldo inspira o teste de condição, e Errou, do Faustão, o ramo alternativo. A CNN reúne Receba e Bora Bill entre os virais de 2022. A Exame descreve o bordão Sabor energético. Os comandos técnicos e a família SABOR são adaptações próprias.
 
-https://museudememes.com.br/collection/e-verdade-esse-bilete
+https://33giga.com.br/e-hora-do-show-confira-memes-saidos-do-iconico-video-de-bambam-e-companhia
+
+https://museudememes.com.br/collection/ja-acabou-jessica
+
+https://redeglobo.globo.com/rj/tvriosul/Quem-Somos/noticia/pode-isso-arnaldo-novo-quadro-do-rj1-com-arnaldo-cezar-coelho.ghtml
+
+https://gshow.globo.com/tv/noticia/publico-se-diverte-revendo-quadro-do-domingao-que-deu-origem-ao-classico-meme-do-faustao-errou.ghtml
 
 https://www.cnnbrasil.com.br/pop/veja-os-memes-que-bombaram-nas-redes-sociais-em-2022/
 
@@ -401,4 +407,4 @@ https://exame.com/pop/sabor-energetico-entenda-o-meme-de-toguro-que-conquistou-a
 | Símbolos e tipos | semantic.py e casos inválidos |
 | Geração equivalente | codegen.py e quatro programas gerados |
 | Suíte válida e inválida | exemplos, testes e resultados_validacao.txt |
-| Apresentação e defesa | apresentacao.pptx e roteiro_defesa.md |
+| Apresentação e defesa | apresentacao_nova.pptx e roteiro_defesa.md |

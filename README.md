@@ -47,13 +47,33 @@ São 32 métodos de teste, alguns com múltiplos casos. `demo.py` regenera e exe
 ## Exemplo da linguagem
 
 ```text
-ACORDA_PEDRINHO
+E_HORA_DO_SHOW
 SABOR_INTEIRO numero = 67;
 SABOR_TEXTO mensagem = "Receba!";
 RECEBA numero = numero + 1;
 AMOSTRADINHO(mensagem, numero);
-ACABOU
+JA_ACABOU_JESSICA
 ```
+
+## MemeScript × Python
+
+| MemeScript | Python |
+| --- | --- |
+| `SABOR_INTEIRO` | `int` |
+| `SABOR_REAL` | `float` |
+| `SABOR_TEXTO` | `str` |
+| `RECEBA` | `=` (atribuição) |
+| `QUERO_CAFE` | `input()` |
+| `AMOSTRADINHO` | `print()` |
+| `PODE_ISSO_ARNALDO` | `if` |
+| `ERROU` | `else` |
+| `BORA_BILL` | `while` |
+| `DESCANSAR_NE` | `break` |
+| `ATA` | Fim do bloco pela redução da indentação |
+| `E_HORA_DO_SHOW` | Início do programa, sem palavra reservada equivalente |
+| `JA_ACABOU_JESSICA` | Fim do programa, sem palavra reservada equivalente |
+
+Python não usa `end`: os blocos são definidos pela indentação. Na entrada de números, `QUERO_CAFE` gera `int(input())` ou `float(input())`, conforme o tipo declarado.
 
 ## Regras principais
 
@@ -62,7 +82,7 @@ ACABOU
 - `RECEBA` modifica uma variável já declarada. Não faz declaração implícita.
 - `QUERO_CAFE(nome);` lê um inteiro, real ou texto conforme a tabela de símbolos. Reais usam ponto decimal.
 - `AMOSTRADINHO(expressao, ...);` mostra um ou mais valores separados por espaço e termina com uma quebra de linha.
-- `E_VERDADE_ESSE_BILETE (comparacao)` abre um condicional. `SO_QUE_NAO` é opcional. Um único `ATA` fecha o condicional inteiro.
+- `PODE_ISSO_ARNALDO (comparacao)` abre um condicional. `ERROU` é opcional. Um único `ATA` fecha o condicional inteiro.
 - `BORA_BILL (comparacao)` abre um laço, fechado por `ATA`.
 - `DESCANSAR_NE;` encerra o laço mais próximo. Fora de um laço, causa erro semântico.
 - Comandos simples terminam em `;`. Aberturas e fechamentos de programa/bloco não usam `;`.
@@ -89,7 +109,7 @@ ACABOU
 | `testes/` | Suíte automatizada |
 | `docs/gramatica.ebnf` | Gramática completa |
 | `docs/relatorio_tecnico.md`, `.docx` e `.pdf` | Especificação formal |
-| `docs/apresentacao.pptx` | Apresentação editável com notas |
+| `docs/apresentacao_nova.pptx` | Apresentação editável com notas |
 | `docs/roteiro_defesa.md` | Falas sugeridas, demonstração e perguntas |
 | `docs/resultados_validacao.txt` | Registro reproduzível dos testes |
 

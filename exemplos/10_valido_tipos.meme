@@ -1,4 +1,4 @@
-ACORDA_PEDRINHO
+E_HORA_DO_SHOW
 SABOR_INTEIRO print = 67;
 SABOR_REAL class = 0;
 SABOR_TEXTO nome = "";
@@ -7,4 +7,4 @@ QUERO_CAFE(class);
 RECEBA class = class / 2;
 AMOSTRADINHO(nome, print, class);
 AMOSTRADINHO("Texto:", "ATA" == "ATA");
-ACABOU
+JA_ACABOU_JESSICA

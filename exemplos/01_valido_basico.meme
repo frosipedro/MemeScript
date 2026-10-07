@@ -1,4 +1,4 @@
-ACORDA_PEDRINHO
+E_HORA_DO_SHOW
 
 SABOR_INTEIRO numero = 67;
 SABOR_TEXTO mensagem = "Receba!";
@@ -6,4 +6,4 @@ SABOR_TEXTO mensagem = "Receba!";
 RECEBA numero = numero + 1;
 AMOSTRADINHO(mensagem, numero);
 
-ACABOU
+JA_ACABOU_JESSICA

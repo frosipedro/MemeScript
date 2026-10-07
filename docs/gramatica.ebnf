@@ -1,5 +1,5 @@
-program = "ACORDA_PEDRINHO", { declaration },
-          { statement }, "ACABOU" ;
+program = "E_HORA_DO_SHOW", { declaration },
+          { statement }, "JA_ACABOU_JESSICA" ;
 
 declaration = type, IDENTIFIER, "=", expression, ";" ;
 type = "SABOR_INTEIRO" | "SABOR_REAL" | "SABOR_TEXTO" ;
@@ -11,8 +11,8 @@ assignment = "RECEBA", IDENTIFIER, "=", expression, ";" ;
 input = "QUERO_CAFE", "(", IDENTIFIER, ")", ";" ;
 output = "AMOSTRADINHO", "(", expression,
          { ",", expression }, ")", ";" ;
-if_stmt = "E_VERDADE_ESSE_BILETE", "(", expression, ")",
-          block, [ "SO_QUE_NAO", block ], "ATA" ;
+if_stmt = "PODE_ISSO_ARNALDO", "(", expression, ")",
+          block, [ "ERROU", block ], "ATA" ;
 while_stmt = "BORA_BILL", "(", expression, ")", block, "ATA" ;
 break_stmt = "DESCANSAR_NE", ";" ;
 

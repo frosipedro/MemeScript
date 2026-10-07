@@ -1,8 +1,8 @@
 [
   {
-    "kind": "ACORDA_PEDRINHO",
-    "lexeme": "ACORDA_PEDRINHO",
-    "value": "ACORDA_PEDRINHO",
+    "kind": "E_HORA_DO_SHOW",
+    "lexeme": "E_HORA_DO_SHOW",
+    "value": "E_HORA_DO_SHOW",
     "line": 1,
     "column": 1
   },
@@ -245,9 +245,9 @@
     "column": 25
   },
   {
-    "kind": "E_VERDADE_ESSE_BILETE",
-    "lexeme": "E_VERDADE_ESSE_BILETE",
-    "value": "E_VERDADE_ESSE_BILETE",
+    "kind": "PODE_ISSO_ARNALDO",
+    "lexeme": "PODE_ISSO_ARNALDO",
+    "value": "PODE_ISSO_ARNALDO",
     "line": 8,
     "column": 9
   },
@@ -256,35 +256,35 @@
     "lexeme": "(",
     "value": "(",
     "line": 8,
-    "column": 31
+    "column": 27
   },
   {
     "kind": "IDENTIFIER",
     "lexeme": "j",
     "value": "j",
     "line": 8,
-    "column": 32
+    "column": 28
   },
   {
     "kind": "==",
     "lexeme": "==",
     "value": "==",
     "line": 8,
-    "column": 34
+    "column": 30
   },
   {
     "kind": "INTEGER",
     "lexeme": "2",
     "value": 2,
     "line": 8,
-    "column": 37
+    "column": 33
   },
   {
     "kind": ")",
     "lexeme": ")",
     "value": ")",
     "line": 8,
-    "column": 38
+    "column": 34
   },
   {
     "kind": "DESCANSAR_NE",
@@ -483,9 +483,9 @@
     "column": 27
   },
   {
-    "kind": "ACABOU",
-    "lexeme": "ACABOU",
-    "value": "ACABOU",
+    "kind": "JA_ACABOU_JESSICA",
+    "lexeme": "JA_ACABOU_JESSICA",
+    "value": "JA_ACABOU_JESSICA",
     "line": 16,
     "column": 1
   },

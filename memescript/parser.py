@@ -34,12 +34,12 @@ class Parser:
         return self.advance()
 
     def parse(self):
-        self.expect("ACORDA_PEDRINHO")
+        self.expect("E_HORA_DO_SHOW")
         declarations = []
         while self.current.kind in TYPE_KEYWORDS:
             declarations.append(self.declaration())
-        statements = self.block({"ACABOU"})
-        self.expect("ACABOU")
+        statements = self.block({"JA_ACABOU_JESSICA"})
+        self.expect("JA_ACABOU_JESSICA")
         self.expect("EOF")
         return ast.Program(declarations, statements)
 
@@ -54,7 +54,7 @@ class Parser:
     def block(self, terminators):
         statements = []
         while self.current.kind not in terminators:
-            if self.current.kind in ("EOF", "ACABOU"):
+            if self.current.kind in ("EOF", "JA_ACABOU_JESSICA"):
                 self.error(" ou ".join(sorted(terminators)))
             statements.append(self.statement())
         return statements
@@ -85,14 +85,14 @@ class Parser:
             self.expect(")")
             self.expect(";")
             return ast.Print(expressions, token.line, token.column)
-        if token.kind == "E_VERDADE_ESSE_BILETE":
+        if token.kind == "PODE_ISSO_ARNALDO":
             self.advance()
             self.expect("(")
             condition = self.expression()
             self.expect(")")
-            then_body = self.block({"SO_QUE_NAO", "ATA"})
+            then_body = self.block({"ERROU", "ATA"})
             else_body = None
-            if self.current.kind == "SO_QUE_NAO":
+            if self.current.kind == "ERROU":
                 self.advance()
                 else_body = self.block({"ATA"})
             self.expect("ATA")
@@ -109,7 +109,7 @@ class Parser:
             self.advance()
             self.expect(";")
             return ast.Break(token.line, token.column)
-        self.error("RECEBA, QUERO_CAFE, AMOSTRADINHO, E_VERDADE_ESSE_BILETE, BORA_BILL ou DESCANSAR_NE")
+        self.error("RECEBA, QUERO_CAFE, AMOSTRADINHO, PODE_ISSO_ARNALDO, BORA_BILL ou DESCANSAR_NE")
 
     def expression(self):
         # No máximo uma comparação por nível. Aritmética vem primeiro.

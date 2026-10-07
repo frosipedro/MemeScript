@@ -269,7 +269,7 @@
               "node": "Variable",
               "name": "energia",
               "line": 20,
-              "column": 28
+              "column": 24
             },
             "operator": ">=",
             "right": {
@@ -277,10 +277,10 @@
               "value": 67,
               "type_name": "inteiro",
               "line": 20,
-              "column": 39
+              "column": 35
             },
             "line": 20,
-            "column": 36
+            "column": 32
           },
           "then_body": [
             {
