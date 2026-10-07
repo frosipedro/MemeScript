@@ -120,9 +120,7 @@ A versão 1.0 não possui funções, vetores, escopos locais, operadores lógico
 
 Entradas incompatíveis com o tipo, divisão por zero e estouro/faixa numérica em operações são erros de execução do Python gerado. A análise semântica verifica **tipos**, não valores futuros. O runtime do Python também limita aninhamento recursivo e conversão de inteiros com quantidade muito grande de dígitos. Não há prova de término para laços.
 
-## Linguagem destino e uso de IA
-
-O enunciado permite Python desde que a equipe justifique a escolha e a informe ao professor no primeiro marco. A justificativa está no relatório. A escolha ainda precisa ser comunicada pela equipe; este material não afirma que o professor já a aprovou.
+## Uso de IA
 
 Esta versão contou com assistência do ChatGPT na proposta da linguagem, implementação, testes, documentação e apresentação. Os integrantes devem revisar o material, verificar se esse uso é autorizado e dominar as etapas para a defesa individual. Nenhuma divisão de tarefas nem aprovação do professor foi presumida.
 
