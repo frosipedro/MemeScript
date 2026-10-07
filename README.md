@@ -57,21 +57,21 @@ JA_ACABOU_JESSICA
 
 ## MemeScript × Python
 
-| MemeScript | Python |
-| --- | --- |
-| `SABOR_INTEIRO` | `int` |
-| `SABOR_REAL` | `float` |
-| `SABOR_TEXTO` | `str` |
-| `RECEBA` | `=` (atribuição) |
-| `QUERO_CAFE` | `input()` |
-| `AMOSTRADINHO` | `print()` |
-| `PODE_ISSO_ARNALDO` | `if` |
-| `ERROU` | `else` |
-| `BORA_BILL` | `while` |
-| `DESCANSAR_NE` | `break` |
-| `ATA` | Fim do bloco pela redução da indentação |
-| `E_HORA_DO_SHOW` | Início do programa, sem palavra reservada equivalente |
-| `JA_ACABOU_JESSICA` | Fim do programa, sem palavra reservada equivalente |
+| MemeScript          | Python                                                |
+| ------------------- | ----------------------------------------------------- |
+| `SABOR_INTEIRO`     | `int`                                                 |
+| `SABOR_REAL`        | `float`                                               |
+| `SABOR_TEXTO`       | `str`                                                 |
+| `RECEBA`            | `=` (atribuição)                                      |
+| `QUERO_CAFE`        | `input()`                                             |
+| `AMOSTRADINHO`      | `print()`                                             |
+| `PODE_ISSO_ARNALDO` | `if`                                                  |
+| `ERROU`             | `else`                                                |
+| `BORA_BILL`         | `while`                                               |
+| `DESCANSAR_NE`      | `break`                                               |
+| `ATA`               | Fim do bloco pela redução da indentação               |
+| `E_HORA_DO_SHOW`    | Início do programa, sem palavra reservada equivalente |
+| `JA_ACABOU_JESSICA` | Fim do programa, sem palavra reservada equivalente    |
 
 Python não usa `end`: os blocos são definidos pela indentação. Na entrada de números, `QUERO_CAFE` gera `int(input())` ou `float(input())`, conforme o tipo declarado.
 
@@ -95,23 +95,24 @@ Python não usa `end`: os blocos são definidos pela indentação. Na entrada de
 
 ## Organização
 
-| Caminho | Responsabilidade |
-| --- | --- |
-| `memescript/lexer.py` | ERs, maior casamento, palavras reservadas e localização |
-| `memescript/parser.py` | Gramática e construção da AST |
-| `memescript/ast_nodes.py` | Nós e serialização da AST |
-| `memescript/semantic.py` | Tabela de símbolos e verificação de tipos |
-| `memescript/codegen.py` | Emissão de Python a partir da AST validada |
-| `memescript/compiler.py` | Coordenação das fases |
-| `memescript/__main__.py` | Interface de linha de comando |
-| `exemplos/` | Quatro programas válidos e seis inválidos |
-| `gerados/` | Python, tokens, AST e símbolos dos programas válidos |
-| `testes/` | Suíte automatizada |
-| `docs/gramatica.ebnf` | Gramática completa |
-| `docs/relatorio_tecnico.md`, `.docx` e `.pdf` | Especificação formal |
-| `docs/apresentacao_nova.pptx` | Apresentação editável com notas |
-| `docs/roteiro_defesa.md` | Falas sugeridas, demonstração e perguntas |
-| `docs/resultados_validacao.txt` | Registro reproduzível dos testes |
+| Caminho                                       | Responsabilidade                                        |
+| --------------------------------------------- | ------------------------------------------------------- |
+| `memescript/lexer.py`                         | ERs, maior casamento, palavras reservadas e localização |
+| `memescript/parser.py`                        | Gramática e construção da AST                           |
+| `memescript/ast_nodes.py`                     | Nós e serialização da AST                               |
+| `memescript/semantic.py`                      | Tabela de símbolos e verificação de tipos               |
+| `memescript/codegen.py`                       | Emissão de Python a partir da AST validada              |
+| `memescript/compiler.py`                      | Coordenação das fases                                   |
+| `memescript/__main__.py`                      | Interface de linha de comando                           |
+| `exemplos/`                                   | Quatro programas válidos e seis inválidos               |
+| `gerados/`                                    | Python, tokens, AST e símbolos dos programas válidos    |
+| `testes/`                                     | Suíte automatizada                                      |
+| `docs/gramatica.ebnf`                         | Gramática completa                                      |
+| `docs/relatorio_tecnico.md`, `.docx` e `.pdf` | Especificação formal                                    |
+| `docs/apresentacao_nova.pptx`                 | Apresentação editável com notas                         |
+| `docs/apresentacao_nova.pptx`                 | Apresentação editável com notas                         |
+| `docs/roteiro_defesa.md`                      | Falas sugeridas, demonstração e perguntas               |
+| `docs/resultados_validacao.txt`               | Registro reproduzível dos testes                        |
 
 ## Limites do escopo
 
@@ -129,7 +130,7 @@ Esta versão contou com assistência do ChatGPT na proposta da linguagem, implem
 
 Aqui estão os membros do time que contribuíram para o desenvolvimento deste projeto:
 
-- Pedro Rockenbach Frosi           [@frosipedro](https://github.com/frosipedro)
-- Cristian dos Santos Siqueira     [@CristianSSiqueira](https://github.com/CristianSSiqueira)
-- Marco Antônio Hendges            [@Marco-Hendges](https://github.com/Marco-Hendges)
-- William Rafael Fagundes          [@Williamrafaelfagundes](https://github.com/Williamrafaelfagundes)
+- Pedro Rockenbach Frosi [@frosipedro](https://github.com/frosipedro)
+- Cristian dos Santos Siqueira [@CristianSSiqueira](https://github.com/CristianSSiqueira)
+- Marco Antônio Hendges [@Marco-Hendges](https://github.com/Marco-Hendges)
+- William Rafael Fagundes [@Williamrafaelfagundes](https://github.com/Williamrafaelfagundes)
