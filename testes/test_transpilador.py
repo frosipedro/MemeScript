@@ -10,6 +10,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
+# Permite rodar os testes de qualquer pasta (inclusive de dentro de testes/).
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from memescript import ast_nodes as ast
 from memescript.compiler import compile_source
 from memescript.errors import CompileError
