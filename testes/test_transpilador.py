@@ -77,7 +77,9 @@ class ParserTests(unittest.TestCase):
 
     def test_comparisons(self):
         output, _ = execute(program("AMOSTRADINHO(2<3, 2<=2, 3>2, 3>=3, 2==2, 2!=3);"))
-        self.assertEqual(output, "True True True True True True\n")
+        self.assertEqual(output, "verdadeiro verdadeiro verdadeiro verdadeiro verdadeiro verdadeiro\n")
+        output, _ = execute(program("AMOSTRADINHO(3<2, 2!=2, (1<2)==(2<1));"))
+        self.assertEqual(output, "falso falso falso\n")
 
     def test_empty_blocks_and_program(self):
         source = program("PODE_ISSO_ARNALDO (1==2)\nERROU\nATA\nBORA_BILL (1==2)\nATA")
@@ -136,7 +138,7 @@ class SemanticTests(unittest.TestCase):
     def test_comparison_type_rules(self):
         self.reject('AMOSTRADINHO("a"<"b");', "incompatível")
         self.reject('AMOSTRADINHO("67"==67);', "incompatível")
-        self.assertEqual(execute(program('AMOSTRADINHO("ATA"=="ATA", 1==1.0);'))[0], "True True\n")
+        self.assertEqual(execute(program('AMOSTRADINHO("ATA"=="ATA", 1==1.0);'))[0], "verdadeiro verdadeiro\n")
 
     def test_break_outside_loop(self):
         self.reject("DESCANSAR_NE;", "dentro de BORA_BILL")
@@ -153,7 +155,7 @@ class SemanticTests(unittest.TestCase):
 
 class IntegrationTests(unittest.TestCase):
     def test_valid_examples(self):
-        expected = {"01_valido_basico": "Receba! 68\n", "09_valido_aninhado": "0 1\n1 1\nFim: 2 2\n", "10_valido_tipos": "Pedro 67 6.7\nTexto: True\n"}
+        expected = {"01_valido_basico": "Receba! 68\n", "09_valido_aninhado": "0 1\n1 1\nFim: 2 2\n", "10_valido_tipos": "Pedro 67 6.7\nTexto: verdadeiro\n"}
         for stem, output in expected.items():
             with self.subTest(stem=stem):
                 path = ROOT / "exemplos" / (stem + ".meme")

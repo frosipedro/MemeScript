@@ -2,6 +2,11 @@
 
 from . import ast_nodes as ast
 
+# Na MemeScript, o tipo lógico só nasce de uma comparação. Não há variável,
+# literal nem operador lógico, então um nó Binary com um destes operadores
+# é exatamente uma expressão do tipo lógico.
+COMPARISONS = {"==", "!=", "<", "<=", ">", ">="}
+
 
 class CodeGenerator:
     def __init__(self, symbols):
@@ -27,6 +32,13 @@ class CodeGenerator:
             return f"({self.expression(node.left)} {node.operator} {self.expression(node.right)})"
         raise TypeError(type(node).__name__)
 
+    def output_value(self, node):
+        # Valores lógicos são exibidos com as palavras da linguagem, não com True/False do Python.
+        code = self.expression(node)
+        if isinstance(node, ast.Binary) and node.operator in COMPARISONS:
+            return f"('verdadeiro' if {code} else 'falso')"
+        return code
+
     def convert_assignment(self, name, expression):
         code = self.expression(expression)
         # A promoção inteiro -> real também ocorre no Python gerado.
@@ -43,7 +55,7 @@ class CodeGenerator:
                 code = "input()" if conversion == "str" else f"{conversion}(input())"
                 self.emit(f"{self.name(node.name)} = {code}", depth)
             elif isinstance(node, ast.Print):
-                args = ", ".join(self.expression(expr) for expr in node.expressions)
+                args = ", ".join(self.output_value(expr) for expr in node.expressions)
                 self.emit(f"print({args})", depth)
             elif isinstance(node, ast.If):
                 self.emit(f"if {self.expression(node.condition)}:", depth)

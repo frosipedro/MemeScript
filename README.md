@@ -90,7 +90,7 @@ Python não usa `end`: os blocos são definidos pela indentação. Na entrada de
 - Operadores: `+ - * / == != < <= > >=`. Unários `+` e `-` têm maior precedência, seguidos de `* /`, `+ -` e comparações. Parênteses modificam o agrupamento.
 - `/` sempre resulta em real. Inteiro pode ser promovido para real. Real não é convertido implicitamente para inteiro.
 - Texto aceita apenas igualdade/desigualdade e entrada/saída, sem concatenação ou operações aritméticas.
-- Comparações produzem um tipo lógico interno. Ele pode ser exibido, mas não é um tipo declarável.
+- Comparações produzem um tipo lógico interno. Ele é exibido como `verdadeiro` ou `falso`, mas não é um tipo declarável.
 - Identificadores usam `[A-Za-z_][A-Za-z0-9_]*`. A linguagem diferencia maiúsculas de minúsculas. Strings podem conter acentos e os escapes `\n`, `\r`, `\t`, `\"` e `\\`.
 
 ## Organização
@@ -109,9 +109,7 @@ Python não usa `end`: os blocos são definidos pela indentação. Na entrada de
 | `testes/`                                     | Suíte automatizada                                      |
 | `docs/gramatica.ebnf`                         | Gramática completa                                      |
 | `docs/relatorio_tecnico.md`, `.docx` e `.pdf` | Especificação formal                                    |
-| `docs/apresentacao_nova.pptx`                 | Apresentação editável com notas                         |
-| `docs/apresentacao_nova.pptx`                 | Apresentação editável com notas                         |
-| `docs/roteiro_defesa.md`                      | Falas sugeridas, demonstração e perguntas               |
+| `docs/apresentacao.pptx`                      | Apresentação editável com notas                         |
 | `docs/resultados_validacao.txt`               | Registro reproduzível dos testes                        |
 
 ## Limites do escopo
@@ -122,7 +120,7 @@ Entradas incompatíveis com o tipo, divisão por zero e estouro/faixa numérica 
 
 ## Uso de IA
 
-Esta versão contou com assistência do ChatGPT na proposta da linguagem, implementação, testes, documentação e apresentação. Os integrantes devem revisar o material, verificar se esse uso é autorizado e dominar as etapas para a defesa individual. Nenhuma divisão de tarefas nem aprovação do professor foi presumida.
+Foram utilizados o ChatGPT (OpenAI), na proposta da linguagem, implementação, testes, documentação e apresentação, e o Claude (Anthropic), na revisão final do relatório, da apresentação e do código. Todo o material foi revisado e testado pelo grupo, que responde pela solução entregue.
 
 ## Contribuidores
 
