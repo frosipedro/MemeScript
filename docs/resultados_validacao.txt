@@ -1,6 +1,6 @@
 Validação da MemeScript 1.0
-Vocabulário atualizado: E_HORA_DO_SHOW, JA_ACABOU_JESSICA, PODE_ISSO_ARNALDO e ERROU.
-Ambiente: Linux / Python 3.12.14
+Vocabulário: E_HORA_DO_SHOW, JA_ACABOU_JESSICA, PODE_ISSO_ARNALDO e ERROU. Valores lógicos exibidos como verdadeiro/falso.
+Ambiente: Linux / Python 3.13.16
 
 $ python -m unittest discover -s testes -v
 test_cli_check_does_not_write (test_transpilador.IntegrationTests.test_cli_check_does_not_write) ... ok
@@ -37,7 +37,7 @@ test_type_errors (test_transpilador.SemanticTests.test_type_errors) ... ok
 test_undeclared_read_write_and_expression (test_transpilador.SemanticTests.test_undeclared_read_write_and_expression) ... ok
 
 ----------------------------------------------------------------------
-Ran 32 tests in 0.216s
+Ran 32 tests in 0.425s
 
 OK
 
@@ -76,26 +76,26 @@ Fim: 2 2
 === 10_valido_tipos ===
 ACERTOU, MISERAVI! Python gerado em: ./gerados/10_valido_tipos.py
 Pedro 67 6.7
-Texto: True
+Texto: verdadeiro
 
 === 03_erro_lexico ===
+Erro léxico na linha 3, coluna 24: símbolo inválido '@'
 
 === 04_erro_sintatico ===
+Erro sintático na linha 2, coluna 24: encontrado ';'; esperado literal, identificador ou expressão entre parênteses
 
 === 05_erro_semantico ===
+Erro semântico na linha 2, coluna 8: variável 'numero' usada antes da declaração
 
 === 06_erro_redeclaracao ===
+Erro semântico na linha 3, coluna 12: declaração duplicada de 'numero' no escopo global
 
 === 07_erro_tipos ===
+Erro semântico na linha 3, coluna 8: atribuição incompatível: esperado inteiro, recebido texto
 
 === 08_erro_break ===
+Erro semântico na linha 2, coluna 1: DESCANSAR_NE só pode aparecer dentro de BORA_BILL
 
 Demonstração concluída: programas válidos executados e inválidos rejeitados.
-Erro léxico na linha 3, coluna 24: símbolo inválido '@'
-Erro sintático na linha 2, coluna 24: encontrado ';'; esperado literal, identificador ou expressão entre parênteses
-Erro semântico na linha 2, coluna 8: variável 'numero' usada antes da declaração
-Erro semântico na linha 3, coluna 12: declaração duplicada de 'numero' no escopo global
-Erro semântico na linha 3, coluna 8: atribuição incompatível: esperado inteiro, recebido texto
-Erro semântico na linha 2, coluna 1: DESCANSAR_NE só pode aparecer dentro de BORA_BILL
 
 Código de saída: 0

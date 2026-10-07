@@ -4,7 +4,7 @@
 
 UNIJUÍ • Professor Marcos Ronaldo Melo Cavalheiro
 
-Grupo de Pedro Rockenbach Frosi • Versão 1.0 • Outubro de 2026
+Integrantes: Cristian dos Santos Siqueira, Marco Antônio Hendges, Pedro Rockenbach Frosi e William Rafael Fagundes • Versão 1.0 • Outubro de 2026
 
 ## Objetivo e escopo
 
@@ -14,13 +14,32 @@ A versão implementada oferece três tipos primitivos, declaração e atribuiç�
 
 ## Três decisões próprias de projeto
 
-1. **Vocabulário temático e grafia estável.** Palavras reservadas em maiúsculas e com sublinhados associam memes a operações: RECEBA atribui, AMOSTRADINHO exibe e DESCANSAR_NE interrompe um laço. O prefixo SABOR identifica tipos. Operadores matemáticos mantêm a grafia usual.
-2. **Tipos explícitos e escopo global.** Todas as declarações aparecem no início e possuem inicializador. A linguagem usa inteiro, real e texto, com promoção de inteiro para real. Essa escolha torna a tabela de símbolos e as incompatibilidades observáveis sem exigir funções ou escopos locais.
-3. **Fechamento explícito e geração por AST.** ATA fecha cada condicional ou laço, independentemente da indentação. O parser usa descida recursiva e o gerador percorre a AST validada. Isso permite demonstrar as produções reconhecidas e preservar o agrupamento das expressões.
+A BIRL-Lite do enunciado serviu apenas como modelo do nível de formalização. As três decisões abaixo mudam a forma da gramática, e não só os nomes das palavras reservadas.
+
+1. **Atribuição introduzida por palavra reservada.** Na BIRL-Lite, uma atribuição é id = expressão;. Na MemeScript, é RECEBA id = expressão;. Com isso, todo comando começa com uma palavra reservada própria (RECEBA, QUERO_CAFE, AMOSTRADINHO, PODE_ISSO_ARNALDO, BORA_BILL ou DESCANSAR_NE), e o parser escolhe a produção de statement olhando apenas o primeiro token, sem precisar fatorar a gramática. Atribuição e declaração também ficam visualmente distintas.
+2. **Seção de declarações separada e inicialização obrigatória.** Na BIRL-Lite, declarações e comandos se misturam no mesmo bloco e o valor inicial é opcional. Na MemeScript, todas as declarações vêm no início do programa, antes do primeiro comando, e cada uma exige inicializador, como em SABOR_INTEIRO x = 0;. Assim nunca existe variável sem valor, e a tabela de símbolos está completa antes da análise dos comandos. Uma declaração no meio dos comandos é erro sintático.
+3. **Terminadores distintos para programa e blocos.** A BIRL-Lite usa a mesma palavra BIRL para fechar condicionais, laços e o próprio programa. A MemeScript usa JA_ACABOU_JESSICA apenas para o programa e ATA apenas para blocos, e um único ATA fecha o condicional inteiro, incluindo o ramo ERROU. Um ATA esquecido é apontado com precisão (encontrado JA_ACABOU_JESSICA; esperado ATA), e a ambiguidade do senão pendente não pode ocorrer.
+
+Outras diferenças em relação ao modelo: AMOSTRADINHO aceita várias expressões separadas por vírgula, existe o tipo texto, e DESCANSAR_NE interrompe o laço mais próximo, com uma regra semântica que o proíbe fora de BORA_BILL.
+
+| Aspecto | BIRL-Lite | MemeScript |
+| --- | --- | --- |
+| Atribuição | x = e; | RECEBA x = e; |
+| Declarações | Misturadas aos comandos, inicializador opcional | Seção no início, inicializador obrigatório |
+| Fechamento | BIRL fecha blocos e programa | ATA fecha blocos; JA_ACABOU_JESSICA fecha o programa |
+| Saída | Uma string ou expressão | Uma ou mais expressões |
+| Tipos | Inteiro e real | Inteiro, real e texto |
+| Laço | Apenas a condição | Condição e interrupção com DESCANSAR_NE |
 
 ## Justificativa da linguagem destino
 
-Python oferece execução simples e código gerado legível. Variáveis, comparações, if/else, while e entrada/saída possuem traduções diretas. A MemeScript mantém seu próprio sistema estático de tipos e o verifica antes da geração, mesmo que o destino use tipagem dinâmica. O enunciado exige informar e justificar a escolha ao professor no primeiro marco; a equipe deve realizar essa comunicação.
+A linguagem destino é Python 3.10 ou superior. A escolha foi informada ao professor no primeiro marco e se apoia em três motivos técnicos:
+
+1. Todas as construções da MemeScript têm equivalente direto no destino: atribuição, if/else, while, break, input() e print().
+2. O sistema de tipos é inteiramente da MemeScript. Python só verifica tipos durante a execução, então nenhuma checagem é delegada ao destino: uso antes da declaração, redeclaração e incompatibilidades são detectados pelo transpilador antes de qualquer código ser gerado.
+3. Os tipos continuam guiando a geração: variáveis reais recebem float(...), a leitura usa int(input()) ou float(input()) conforme o tipo declarado, a divisão produz sempre real e comparações são exibidas como verdadeiro ou falso.
+
+Como Python delimita blocos por indentação, o gerador calcula a indentação a partir da profundidade de cada nó na AST, e não do texto do código-fonte.
 
 <!-- PAGEBREAK -->
 
@@ -50,13 +69,22 @@ Os significados abaixo são decisões da linguagem. O uso do prefixo SABOR adapt
 | real | 6.7 | float |
 | texto | "Receba!" | str |
 
-Comparações produzem o tipo interno lógico, representado por bool. Ele não possui palavra reservada de declaração e pode aparecer em condições, igualdade entre resultados lógicos e saída. Um inteiro não vale implicitamente como condição.
+Comparações produzem o tipo interno lógico, representado por bool no destino e exibido como verdadeiro ou falso. Ele não possui palavra reservada de declaração e pode aparecer em condições, igualdade entre resultados lógicos e saída. Um inteiro não vale implicitamente como condição.
 
 <!-- PAGEBREAK -->
 
 ## Alfabeto e reconhecimento léxico
 
-O alfabeto Σ é o conjunto finito de valores escalares Unicode que podem ser codificados em UTF-8: U+0000 a U+D7FF e U+E000 a U+10FFFF. Nem toda palavra de Σ* forma um programa. As expressões regulares restringem os caracteres aceitos em cada categoria. Identificadores e palavras reservadas usam caracteres ASCII; textos e comentários podem conter acentos.
+O alfabeto Σ da linguagem é o conjunto dos caracteres que podem aparecer no código fora de textos e comentários:
+
+```text
+Σ = { A..Z, a..z, 0..9, _,
+      + - * / = ! < >,
+      ( ) , ; . ",
+      espaço, tab, CR, LF }
+```
+
+Dentro de um literal de texto ou de um comentário, aceita-se qualquer caractere Unicode codificado em UTF-8, exceto quebra de linha e, nos textos, os controles U+0000 a U+001F, aspas e barra invertida sem escape. Um caractere fora de Σ no código, como @, #, ç ou letra acentuada, gera erro léxico com linha e coluna. Os caracteres ! e . pertencem a Σ, mas só formam token dentro de != e de um número real; isolados, também são erro léxico. Identificadores e palavras reservadas usam apenas ASCII.
 
 O leitor de arquivos aceita UTF-8 com ou sem BOM. Posições usam linhas e colunas iniciadas em 1. Um tab conta como um caractere na coluna, sem expandir para uma largura visual fixa. CRLF conta como uma única quebra de linha; CR e LF isolados também encerram linhas.
 
@@ -245,7 +273,7 @@ O gerador recebe a AST validada e a tabela de símbolos. Cada nó possui uma tra
 | --- | --- |
 | VarDecl e Assign | Atribuição, com float para destino real |
 | Read | input com conversão numérica quando necessária |
-| Print | print com os argumentos da AST |
+| Print | print com os argumentos da AST; comparações exibidas como verdadeiro ou falso |
 | If | if e, quando presente, else |
 | While | while |
 | Break | break |
@@ -331,7 +359,7 @@ Além dos cinco casos mínimos exigidos, a entrega contém redeclaração, incom
 | 09_valido_aninhado.meme | Break encerra apenas o laço interno |
 | 10_valido_tipos.meme | Com Pedro e 13.4, saída Pedro 67 6.7 |
 
-Na validação desta versão, 32 métodos de unittest passaram no ambiente Linux com Python 3.12.14. Alguns métodos usam subcasos. A suíte verifica maior casamento, posições CRLF, limites de palavras reservadas, escapes, AST, precedência, associatividade, tipos, promoção, entrada, saída, nomes do Python e comportamento da CLI. A demonstração também executou os quatro programas válidos e rejeitou os seis inválidos.
+Na validação desta versão, 32 métodos de unittest passaram no ambiente Linux com Python 3.13.16. Alguns métodos usam subcasos. A suíte verifica maior casamento, posições CRLF, limites de palavras reservadas, escapes, AST, precedência, associatividade, tipos, promoção, entrada, saída, nomes do Python e comportamento da CLI. A demonstração também executou os quatro programas válidos e rejeitou os seis inválidos.
 
 O registro em resultados_validacao.txt contém a execução dos comandos. Os tempos observados nesse ambiente não são um benchmark nem uma medida de desempenho da linguagem.
 
@@ -361,17 +389,15 @@ A linguagem não inclui funções, vetores, escopos locais, operadores lógicos 
 
 O código gerado depende da semântica numérica do Python. Entradas incompatíveis, divisão por zero e limites numéricos em execução não são erros estáticos de tipo. O transpilador não demonstra que um laço termina. Aninhamento muito profundo depende do limite de recursão do runtime.
 
-## Uso de inteligência artificial e participação
+## Uso de inteligência artificial
 
-Esta versão contou com assistência do ChatGPT na proposta temática, código, testes e materiais de apresentação. A equipe deve revisar os arquivos, confirmar a autorização desse uso conforme as orientações da disciplina e dominar as etapas para a arguição individual. Este relatório não presume aprovação do professor nem atribui tarefas realizadas a integrantes específicos.
-
-Os demais integrantes devem completar a identificação do grupo antes da entrega. A participação presencial, a comunicação da linguagem destino e o domínio individual permanecem responsabilidades da equipe.
+Foram utilizados o ChatGPT (OpenAI), na proposta temática, no código, nos testes e nos materiais de apresentação, e o Claude (Anthropic), na revisão final do relatório, da apresentação e do código. Todo o material foi revisado e testado pelo grupo, que responde pela solução entregue.
 
 <!-- PAGEBREAK -->
 
 ## Referências e correspondência com o enunciado
 
-**Fonte normativa.** Cavalheiro, Marcos Ronaldo Melo. Trabalho Prático 1 — Projeto e Implementação de uma Linguagem de Programação Temática, versão 6. Documento da disciplina Linguagens Formais e Compiladores, UNIJUÍ, fornecido pelo aluno.
+**Fonte normativa.** Cavalheiro, Marcos Ronaldo Melo. Trabalho Prático 1 — Projeto e Implementação de uma Linguagem de Programação Temática, versão 6. Documento da disciplina Linguagens Formais e Compiladores, UNIJUÍ, disponibilizado na disciplina.
 
 **Documentação técnica.** Python Software Foundation. Python 3 Documentation: re, dataclasses, unittest, built-in functions e controle de fluxo. As páginas documentam as APIs usadas, não uma gramática externa copiada para a MemeScript.
 
@@ -407,4 +433,4 @@ https://exame.com/pop/sabor-energetico-entenda-o-meme-de-toguro-que-conquistou-a
 | Símbolos e tipos | semantic.py e casos inválidos |
 | Geração equivalente | codegen.py e quatro programas gerados |
 | Suíte válida e inválida | exemplos, testes e resultados_validacao.txt |
-| Apresentação e defesa | apresentacao_nova.pptx e roteiro_defesa.md |
+| Apresentação e defesa | docs/apresentacao.pptx e demonstração com demo.py |
